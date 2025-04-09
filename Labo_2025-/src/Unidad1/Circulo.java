@@ -21,13 +21,13 @@ public class Circulo {
 
     public double calcularArea(){
         double area = 0.0;
-        area = 3.14 * radio*radio;
+        area = 3.14 * (radio*radio);
         return area;
     }
 
     public double calcularPerimetro(){
         double perimetro = 0.0;
-        perimetro = 2 * 3.14 * radio;
+        perimetro = 2 * (3.14 * radio);
         return perimetro;
     }
     public static void main(String[] args) {

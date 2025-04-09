@@ -48,8 +48,8 @@ public class Rectangulo {
         Rectangulo r1 = new Rectangulo();
         Rectangulo r2 = new Rectangulo(base, altura);
 
-        System.out.println("Base: " + r1.base);
-        System.out.println("Altura: " + r1.altura);
+        System.out.println("Base: " + r1.getBase());
+        System.out.println("Altura: " + r1.getAltura());
         System.out.println("Area: " + r1.calcularArea());
         System.out.println("Perimetro: " + r1.calcularPerimetro());
     }
