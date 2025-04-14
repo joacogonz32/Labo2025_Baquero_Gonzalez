@@ -70,17 +70,84 @@ public class Fecha {
     }
 
     public int cantDiasMes(int auxMes) {
+        int cantidad = 0;
         if (auxMes == 1 || auxMes == 3 || auxMes == 5 || auxMes == 7 || auxMes == 8 || auxMes == 10 || auxMes == 12){
+            cantidad = 31;
             System.out.println("Cantidad de dias del mes " + auxMes + " es: " + cantidad);
         }
+        else if(auxMes == 2){
+            cantidad = 28;
+        }
+        else if (auxMes == 4 || auxMes == 6 || auxMes == 9 || auxMes == 11){
+            cantidad = 30;
+        }
+        else{
+            System.out.println("Ingrese un mes valido.");
+        }
+        return cantidad;
     }
 
+    public void fechaCorta(int dia, int mes, int año){
+        System.out.println("Fecha formato corto: " + dia + "-" + mes + "-" + año);
+    }
+
+    public void fechaLarga(int dia, int mes, int año){
+        System.out.println("Fecha formato largo: " + dia + " del mes " + mes + " del año " + año);
+    }
+
+    public void siguienteDia(int dia, int mes, int año){
+        int nuevoDia = dia + 1;
+        System.out.println("Nueva fecha: " + nuevoDia + "-" + mes + "-" + año);
+    }
+
+    public void anteriorDia(int dia, int mes, int año){
+        int nuevoDia = dia - 1;
+        System.out.println("Nueva fecha: " + nuevoDia + "-" + mes + "-" + año);
+    }
+
+    public void igualQue(int dia, int mes, int año){
+
+    }
+
+    public void menorQue(int dia, int mes, int año){
+
+    }
+
+    public void mayorQue(int dia, int mes, int año){
+
+    }
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        int dia = 0;
+        int mes = 0;
+        int año = 0;
         int auxMes = 0;
+        Fecha f1 = new Fecha();
+        Fecha f2 = new Fecha(dia, mes, año);
 
-        System.out.println("Ingresar un mes: ");
-        auxMes = entrada.nextInt();
+        f1.setAño(2008);
+        f1.setMes(2);
+        f1.setDia(13);
+
+        f1.valida();
+        f1.cantDiasMes(auxMes);
+        f1.fechaCorta(dia, mes, año);
+        f1.fechaLarga(dia, mes, año);
+        f1.siguienteDia(dia, mes, año);
+        f1.anteriorDia(dia, mes, año);
+        f1.igualQue(dia, mes, año);
+        f1.menorQue(dia, mes, año);
+        f1.mayorQue(dia, mes, año);
+
+        f2.valida();
+        f2.cantDiasMes(auxMes);
+        f2.fechaCorta(dia, mes, año);
+        f2.fechaLarga(dia, mes, año);
+        f2.siguienteDia(dia, mes, año);
+        f2.anteriorDia(dia, mes, año);
+        f2.igualQue(dia, mes, año);
+        f2.menorQue(dia, mes, año);
+        f2.mayorQue(dia, mes, año);
     }
 }
