@@ -105,17 +105,56 @@ public class Fecha {
         System.out.println("Nueva fecha: " + nuevoDia + "-" + mes + "-" + año);
     }
 
-    public void igualQue(int dia, int mes, int año){
+    public boolean igualQue(Fecha fecha){
+    boolean resultado;
+    if(dia == fecha.dia && mes == fecha.mes && año == fecha.año) {
+        resultado = true;
+    }
+        else{
+            resultado =false;
+        }
+        return resultado;
+        }
 
+    public boolean menorQue(Fecha fecha){
+        boolean resu;
+        if(año < fecha.año) {
+            resu = true;
+            return resu;
+        }
+        else if(año == fecha.año && mes < fecha.mes) {
+            resu= true;
+            return resu;
+        }
+        else if(año == fecha.año && mes == fecha.mes && dia < fecha.dia){
+            resu= true;
+            return resu;
+                }
+        else{
+            resu= false;
+            return resu;
+        }
+    }
+    public boolean mayorQue(Fecha fecha){
+        boolean resu;
+        if(año > fecha.año) {
+            resu = true;
+            return resu;
+        }
+        else if(año == fecha.año && mes > fecha.mes) {
+            resu= true;
+            return resu;
+        }
+        else if(año == fecha.año && mes == fecha.mes && dia > fecha.dia){
+            resu= true;
+            return resu;
+        }
+        else{
+            resu= false;
+            return resu;
+        }
     }
 
-    public void menorQue(int dia, int mes, int año){
-
-    }
-
-    public void mayorQue(int dia, int mes, int año){
-
-    }
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -124,7 +163,7 @@ public class Fecha {
         int año = 0;
         int auxMes = 0;
         Fecha f1 = new Fecha();
-        Fecha f2 = new Fecha(dia, mes, año);
+        Fecha f2 = new Fecha();
 
         f1.setAño(2008);
         f1.setMes(2);
@@ -136,9 +175,6 @@ public class Fecha {
         f1.fechaLarga(dia, mes, año);
         f1.siguienteDia(dia, mes, año);
         f1.anteriorDia(dia, mes, año);
-        f1.igualQue(dia, mes, año);
-        f1.menorQue(dia, mes, año);
-        f1.mayorQue(dia, mes, año);
 
         f2.valida();
         f2.cantDiasMes(auxMes);
@@ -146,8 +182,10 @@ public class Fecha {
         f2.fechaLarga(dia, mes, año);
         f2.siguienteDia(dia, mes, año);
         f2.anteriorDia(dia, mes, año);
-        f2.igualQue(dia, mes, año);
-        f2.menorQue(dia, mes, año);
-        f2.mayorQue(dia, mes, año);
+
+        System.out.println("f1 < f2: " + f1.menorQue(f2));
+        System.out.println("f1 = f2: " + f1.igualQue(f2));
+        System.out.println("f1 > f2: " + f1.mayorQue(f2));
     }
 }
+

@@ -1,4 +1,5 @@
 package Unidad1;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Libro {
@@ -77,19 +78,21 @@ public class Libro {
 
     public void mostrarInfo(){
         System.out.println("Titulo: " + titulo);
-        System.out.println("Autor: " + autor);
+        System.out.println("Autor: " + autor.getNombre());
         System.out.println("ISBN: " + ISBN);
         System.out.println("Cantidad Paginas: " + cantPaginas);
         System.out.println("Editorial: " + editorial);
-        System.out.println("Fecha publicado: " + fechaPublicado);
+        System.out.println("Fecha publicado: " + fechaPublicado.getMes()+"-" + fechaPublicado.getMes()+ "-" +fechaPublicado.getDia());
     }
 
-    public void comparaFechas(){
-        
-    }
+    public void comparaFechas(Libro fecha) {
+        getFechaPublicado();
+        this.fechaPublicado.mayorQue(fechaPublicado);
+        }
 
     public static void main(String[] args) {
         String titulo = "";
+        Libro fecha;
         Persona autor = new Persona();
         int ISBN = 0;
         int cantPaginas = 0;
