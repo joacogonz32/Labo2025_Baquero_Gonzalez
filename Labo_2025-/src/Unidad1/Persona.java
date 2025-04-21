@@ -8,7 +8,7 @@ public class Persona {
 
     public Persona(){
         this.nombre = "Joaquin";
-        this.edad = 17;
+        this.edad = 46;
         this.direccion = "Av. de Los Incas 3279";
     }
 

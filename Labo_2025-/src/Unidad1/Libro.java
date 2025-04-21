@@ -100,10 +100,12 @@ public class Libro {
         Fecha fechaPublicado = new Fecha();
         Libro l1 = new Libro();
         Libro l2 = new Libro(titulo, autor, ISBN, cantPaginas, editorial, fechaPublicado);
-
+/*
         l1.mostrarInfo();
         l1.comparaFechas();
         l2.mostrarInfo();
         l2.comparaFechas();
+        */
+
     }
 }
