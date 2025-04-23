@@ -42,10 +42,14 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public void mostrarDatos(){
+    public void imprimirDatos(){
         System.out.println("Nombre: " + getNombre());
         System.out.println("Edad: " + getEdad());
         System.out.println("Direccion: " + getDireccion());
+    }
+
+    public String mostrarDatosPersona(){
+        return (nombre+", "+edad+", "+direccion);
     }
 
     public static void main(String[] args) {
@@ -59,8 +63,8 @@ public class Persona {
         p2.setEdad(17);
         p2.setDireccion("Av. San Martin 6782");
 
-        p1.mostrarDatos();
-        p2.mostrarDatos();
+        p1.imprimirDatos();
+        p2.imprimirDatos();
 
     }
 

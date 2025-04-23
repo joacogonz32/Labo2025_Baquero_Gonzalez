@@ -6,7 +6,7 @@ public class Cancion {
 
     public Cancion(){
         this.titulo = "Indiferente";
-        this.autor = new Persona();
+        this.autor = new Persona("Almighty", 34, "Venezuela");
     }
 
     public Cancion(String titulo, Persona autor){
@@ -28,6 +28,10 @@ public class Cancion {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String mostrarDatosCancion (){
+        return (titulo+", "+autor.mostrarDatosPersona());
     }
 
     public static void main(String[] args) {
