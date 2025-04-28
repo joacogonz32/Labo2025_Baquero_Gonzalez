@@ -1,5 +1,6 @@
 package Arrays;
 import Unidad1.Fecha;
+import Arrays.Materias;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class Alumno {
         this.listaNotas.add(5);
         this.listaNotas.add(7);
         this.materiaInscripto = new ArrayList<Materias>();
-        this.materiaInscripto.add("Matematica", );
+        this.materiaInscripto.add("Matematica", new ArrayList<String>(), new ArrayList<Alumno>());
         this.materiaInscripto.add("Lengua");
         this.materiaInscripto.add("Ingles");
     }
@@ -80,6 +81,10 @@ public class Alumno {
         return nota;
     }
 
+    public void agregarMateria(Materias materia){
+        materiaInscripto.add(materia);
+    }
+
         public static void main(String[] args) throws Exception {
             Fecha fechaJuanpi = new Fecha(30, 4, 2008);
             ArrayList<Integer> listaNotas = new ArrayList<Integer>();
@@ -88,6 +93,7 @@ public class Alumno {
             listaNotas.add(7);
             Alumno alumno = new Alumno("Ana", "Gómez", fechaJuanpi, listaNotas);
 
+            alumno.agregarMateria(Matematica);
             alumno.agregarNota(8);
             System.out.println("Notas: " + alumno.getListaNotas());
             System.out.println("Menor nota: " + alumno.menorNota());

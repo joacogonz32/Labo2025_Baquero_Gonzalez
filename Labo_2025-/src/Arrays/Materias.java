@@ -9,7 +9,7 @@ public class Materias {
     private ArrayList<Alumno> alumnosInscriptos;
 
     public Materias(){
-        this.nombreMateria = "Matematica";
+        this.nombreMateria = "Fisica";
         this.contenidos = new ArrayList<String>();
         this.alumnosInscriptos = new ArrayList<Alumno>();
     }
@@ -43,10 +43,6 @@ public class Materias {
         this.alumnosInscriptos = inscriptos;
     }
 
-    public Materias agregarMateria (){
-        materiaInscripto.add();
-    }
-
     public double promedioEdadAlumnos(){
 
     }
@@ -56,6 +52,8 @@ public class Materias {
     }
 
     public static void main(String[] args) {
+        ArrayList<String> contenidosMatematica = new ArrayList<String>("Limites", "Funciones");
 
+        Materias Matematica = new Materias("Matematica", new ArrayList<>())
     }
 }
