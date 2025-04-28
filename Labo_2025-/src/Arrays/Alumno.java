@@ -8,12 +8,20 @@ public class Alumno {
     private String apellido;
     private Fecha fechaNacimiento;
     private ArrayList<Integer> listaNotas;
+    private ArrayList<Materias> materiaInscripto;
 
     public Alumno(){
         this.nombre = "Juan";
         this.apellido = "Baquero";
         this.fechaNacimiento = new Fecha(30, 4, 2008);
         this.listaNotas = new ArrayList<Integer>();
+        this.listaNotas.add(4);
+        this.listaNotas.add(5);
+        this.listaNotas.add(7);
+        this.materiaInscripto = new ArrayList<Materias>();
+        this.materiaInscripto.add("Matematica", );
+        this.materiaInscripto.add("Lengua");
+        this.materiaInscripto.add("Ingles");
     }
 
     public Alumno(String nombre, String apellido, Fecha fechaNacimiento, ArrayList<Integer> listaNotas) {
@@ -49,37 +57,40 @@ public class Alumno {
         this.listaNotas = listaNotas;
     }
 
-    public void AgregarNota(String nombreParametro, String materia){
-        for (int i = 0; i < listaNotas.size(); i++) {
-            if()
-        }
+    public void agregarNota(int nota) {
+        listaNotas.add(nota);
     }
 
-    public Alumno menorNota(){
-        int notaMinina = 0;
+    public double menorNota() {
+        int nota = listaNotas.get(0);
         for (int i = 0; i < listaNotas.size(); i++) {
-            if (){
-
+            if (nota > listaNotas.get(i)) {
+                nota = listaNotas.get(i);
             }
         }
-        return ("La nota minima es "+notaMinina+" y la tiene"+nombre);
+        return nota;
     }
-
-    public int mayorNota(){
-        int notaMaxima = 0;
+    public double mayorNota() {
+        int nota = listaNotas.get(0);
         for (int i = 0; i < listaNotas.size(); i++) {
-            if (){
+            if (nota < listaNotas.get(i)) {
+                nota = listaNotas.get(i);
             }
         }
-        return ("La nota minima es "+notaMaxima+" y la tiene"+nombre);
+        return nota;
     }
 
-    public static void main(String[] args) {
-        String nombreParametro;
-        Scanner e = new Scanner(System.in);
-        System.out.println("Ingresar nombre del alumno: ");
+        public static void main(String[] args) throws Exception {
+            Fecha fechaJuanpi = new Fecha(30, 4, 2008);
+            ArrayList<Integer> listaNotas = new ArrayList<Integer>();
+            listaNotas.add(4);
+            listaNotas.add(5);
+            listaNotas.add(7);
+            Alumno alumno = new Alumno("Ana", "Gómez", fechaJuanpi, listaNotas);
 
-        ArrayList<Integer> listaNotas = new ArrayList<Integer>();
-        Alumno alumno1 = new Alumno("Joaquin", "Gonzalez", new Fecha(), listaNotas);
+            alumno.agregarNota(8);
+            System.out.println("Notas: " + alumno.getListaNotas());
+            System.out.println("Menor nota: " + alumno.menorNota());
+            System.out.println("Mayor nota: " + alumno.mayorNota());
+        }
     }
-}
