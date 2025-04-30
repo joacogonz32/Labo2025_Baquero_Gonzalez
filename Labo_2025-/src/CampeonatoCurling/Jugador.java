@@ -6,6 +6,7 @@ public class Jugador{
     private String apellido;
     private Fecha fechaNacimiento;
     private int dorsal;
+    private boolean esCapitan;
 
     public Jugador(){
         this.apellido = "Gonzalez";

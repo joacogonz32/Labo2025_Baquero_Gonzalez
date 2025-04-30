@@ -6,28 +6,29 @@ public class Equipo{
     private String barrio;
     private ArrayList<Jugador> jugadores;
     private Jugador capitan;
-    private String horario;
+    private String disponibilidad;
 
     public Equipo(){
-        this.nombreEquipo = "Racing Club";
-        this.barrio = "Avellaneda";
+        this.nombreEquipo = "Equipo 1";
+        this.barrio = "Buenos Aires";
         this.jugadores = new ArrayList<>();
-        this.horario = "Noche";
+        this.capitan = new Jugador();
+        this.disponibilidad = "Noche";
     }
 
-    // Constructor por parametro (usa solo horario)
+    // Constructor por parametro (usa solo disponibilidad)
     public Equipo(String horario){
-        this.nombreEquipo = "Racing Club";
-        this.barrio = "Avellaneda";
+        this.nombreEquipo = "Equipo Aux";
+        this.barrio = "Buenos Aires";
         this.jugadores = new ArrayList<>();
-        this.horario = horario;
+        this.disponibilidad = disponibilidad;
     }
 
-    public Equipo(String nombreEquipo, String barrio, Jugador jugadores, String horario){
+    public Equipo(String nombreEquipo, String barrio, Jugador jugadores, String disponibilidad){
         this.nombreEquipo = nombreEquipo;
         this.barrio = barrio;
         this.jugadores = new ArrayList<>();
-        this.horario = horario;
+        this.disponibilidad = disponibilidad;
     }
 
     public String getNombreEquipo() {
@@ -54,12 +55,12 @@ public class Equipo{
         this.jugadores = jugadores;
     }
 
-    public String getHorario() {
-        return horario;
+    public String getDisponibilidad() {
+        return disponibilidad;
     }
 
-    public void setHorario(String horario) {
-        this.horario = horario;
+    public void setHorario(String disponibilidad) {
+        this.disponibilidad = disponibilidad;
     }
 
     public static void main(String[] args) {
