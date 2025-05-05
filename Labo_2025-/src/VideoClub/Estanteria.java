@@ -45,19 +45,6 @@ public class Estanteria {
         peliculas.add(peliculaNueva);
     }
 
-    public Pelicula duracionpeliculaMasLarga() {
-        String nombreAux = "";
-        Pelicula peliculaAux = peliculas.get(0);
-        int indice = peliculas.get(0).getDuracion();
-        for (int i = 0; i < peliculas.size(); i++) {
-            if (indice < peliculas.get(i).getDuracion()) {
-                indice = peliculas.get(i).getDuracion();
-                peliculaAux = peliculas.get(i);
-            }
-        }
-        return peliculaAux;
-    }
-
     public static void main(String[] args) {
         Pelicula peliculaVieja = new Pelicula(); //Pelicula en el vector
         Pelicula peliculaNueva = new Pelicula(); //Pelicula afuera del vector

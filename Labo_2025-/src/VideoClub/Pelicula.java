@@ -22,7 +22,7 @@ public class Pelicula {
     public Pelicula() {
         this.nombre = "Gladiador";
         this.genero = "Accion";
-        this.duracion = 160;
+        this.duracion = 0;
         this.directores = new ArrayList<>();
         this.actores = new ArrayList<>();
         this.idiomasDisponibles = new ArrayList<>();

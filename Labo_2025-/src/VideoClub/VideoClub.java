@@ -54,17 +54,34 @@ public class VideoClub {
         estanterias.add(estanteriaNueva);
     }
 
-    public void MostrarNombreyEstanteria(Pelicula peliculaMasLarga, int identificador){
-        int EstanteriaMasLargaID = 0;
-        for (Estanteria estanteria : estanterias){
-            for (Pelicula pelicula: estanteria.getPeliculas()){
-                EstanteriaMasLargaID = estanteria.getIdentificador();
+    public Pelicula duracionPeliculaMasLarga() {
+        String nombreAux = "";
+        Pelicula peliculaAux = peliculas.get(0);
+        int indice = peliculas.get(0).getDuracion();
+        for (int i = 0; i < peliculas.size(); i++) {
+            if (indice < peliculas.get(i).getDuracion()) {
+                indice = peliculas.get(i).getDuracion();
+                peliculaAux = peliculas.get(i);
             }
         }
-        System.out.println("La pelicula mas larga es: "+peliculaMasLarga.getNombre()+", y se encuentra en la estanteria "+EstanteriaMasLargaID);
+        return peliculaAux;
     }
 
+    public void MostrarNombreyEstanteria(){
+        Pelicula peliculaMayor = new Pelicula();
+        Estanteria estanteriaMayor = new Estanteria();
+        for (Estanteria estanteria : estanterias){
+            for (Pelicula pelicula: estanteria.getPeliculas()){
+                if (pelicula.getDuracion() > peliculaMayor.getDuracion()){
+                    peliculaMayor = pelicula;
+                    estanteriaMayor = estanteria;
+                }
+            }
+        }
+        System.out.println("La pelicula mas larga es: "+peliculaMayor.getNombre()+", y se encuentra en la estanteria "+estanteriaMayor);
+    }
 
+    
 
     public static void main(String[] args) {
         Estanteria estanteriaVieja = new Estanteria();
