@@ -81,7 +81,7 @@ public class VideoClub {
         System.out.println("La pelicula mas larga es: "+peliculaMayor.getNombre()+", y se encuentra en la estanteria "+estanteriaMayor);
     }
 
-    
+
 
     public static void main(String[] args) {
         Estanteria estanteriaVieja = new Estanteria();
