@@ -40,16 +40,16 @@ public class CampeonatoCurling {
                 Equipo equipoLocal = equipos.get(i);
                 Equipo equipoVisitante = equipos.get(j);
                 String turno = obtenerTurnoIgual(equipoLocal, equipoVisitante);
-                if (turno != null){
+                if (turno != null) {
                     fixture.add(new Partido(diasSemana[diaIndex % diasSemana.length], turno, equipoLocal, equipoVisitante));
                     diaIndex++;
+                }
                     else{
                         System.out.println("No se puede agendar el partido entre " + equipoLocal.getNombreEquipo() + " y " + equipoVisitante.getNombreEquipo());
                     }
                 }
             }
         }
-    }
 
     public String obtenerTurnoIgual(Equipo equipoLocal, Equipo equipoVisitante) {
         if (equipoLocal.getDisponibilidad().equals(equipoVisitante.getDisponibilidad())) {

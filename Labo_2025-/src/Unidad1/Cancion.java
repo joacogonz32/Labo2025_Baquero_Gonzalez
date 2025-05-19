@@ -30,8 +30,9 @@ public class Cancion {
         this.titulo = titulo;
     }
 
-    public String mostrarDatosCancion (){
-        return (titulo+", "+autor.mostrarDatosPersona());
+    public void mostrarDatosCancion (){
+        autor.mostrarDatosPersona();
+        System.out.println(titulo);
     }
 
     public static void main(String[] args) {

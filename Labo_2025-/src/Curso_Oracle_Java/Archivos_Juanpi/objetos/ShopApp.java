@@ -1,11 +1,11 @@
-package objetos;
-import persona.Customer;
+package Curso_Oracle_Java.Archivos_Juanpi.objetos;
+
 public class ShopApp{
     public static void main(String[] args) {
         double total = 0.0, tax = 0.2;
         int measurement = 8;
         System.out.println("¡Bienvenidos a la duck Shop!");
-        Customer customer1 = new Customer("Piny", 10);
+        persona.Customer2 customer1 = new persona.Customer2("Piny", 10);
 
         // c1.setName("Pinky");
         //c1.setSize("S")

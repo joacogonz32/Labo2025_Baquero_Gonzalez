@@ -79,7 +79,7 @@ public class CD {
     public void mostrarDatosCd() {
         for (int i = 0; i < cd.size(); i++) {
             Cancion c = cd.get(i);
-            System.out.println(c.mostrarDatosCancion());
+            c.mostrarDatosCancion();
         }
     }
 

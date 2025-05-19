@@ -1,15 +1,17 @@
-package Unidad1;
-import java.util.Scanner;
-public class Rectangulo {
+package Figuras;
+
+public class Rectangulo extends Figura{
     private double base = 0.0;
     private double altura = 0.0;
 
     public Rectangulo(){
+        super();
         this.base = 6;
         this.altura = 4;
     }
 
-    public Rectangulo(double base, double altura){
+    public Rectangulo(double area, double perimetro, double base, double altura){
+        super(area,perimetro);
         this.base = base;
         this.altura = altura;
     }
@@ -45,8 +47,10 @@ public class Rectangulo {
     public static void main(String[] args) {
         double base = 0.0;
         double altura = 0.0;
+        double area = 0.0;
+        double perimetro = 0.0;
         Rectangulo r1 = new Rectangulo();
-        Rectangulo r2 = new Rectangulo(base, altura);
+        Rectangulo r2 = new Rectangulo(area, perimetro,base, altura);
 
         System.out.println("Base: " + r1.getBase());
         System.out.println("Altura: " + r1.getAltura());

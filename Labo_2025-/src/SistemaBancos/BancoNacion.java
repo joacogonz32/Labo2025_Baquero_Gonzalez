@@ -1,27 +1,19 @@
 package SistemaBancos;
 import java.time.LocalDate;
-import java.time.Period;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-
+import Unidad1.Persona;
 public class BancoNacion {
     private String direccion;
-    private boolean rampaDiscapacitados;
-    private boolean es24horas;
-    private ArrayList<Trabajador> trabajadores;
+    private boolean tieneCajerosAutomaticos; //acá va lo que quieran. En el main no especificaba
+    private boolean tieneAscensor; //acá va lo que quieran. En el main no especificaba
 
-    public BancoNacion(){
-        this.direccion = "Av. Constituyentes 5451";
-        this.rampaDiscapacitados = true;
-        this.es24horas = true;
-        this.trabajadores = new ArrayList<>();
-    }
+    private ArrayList<Persona> trabajadores;
 
-    public BancoNacion(String direccion, boolean rampaDiscapacitados, boolean es24horas){
+    public BancoNacion(String direccion, boolean tieneCajerosAutomaticos, boolean tieneAscensor) {
         this.direccion = direccion;
-        this.rampaDiscapacitados = rampaDiscapacitados;
-        this.es24horas = es24horas;
-        this.trabajadores = new ArrayList<>();
+        this.tieneCajerosAutomaticos = tieneCajerosAutomaticos;
+        this.tieneAscensor = tieneAscensor;
+        this.trabajadores = new ArrayList<>(); //Importante definirlo vacio. Quiere decir que al crear un banco no tengo ningún trabajador
     }
 
     public String getDireccion() {
@@ -32,68 +24,74 @@ public class BancoNacion {
         this.direccion = direccion;
     }
 
-    public boolean isRampaDiscapacitados() {
-        return rampaDiscapacitados;
+    public boolean isTieneCajerosAutomaticos() {
+        return tieneCajerosAutomaticos;
     }
 
-    public void setRampaDiscapacitados(boolean rampaDiscapacitados) {
-        this.rampaDiscapacitados = rampaDiscapacitados;
+    public void setTieneCajerosAutomaticos(boolean tieneCajerosAutomaticos) {
+        this.tieneCajerosAutomaticos = tieneCajerosAutomaticos;
     }
 
-    public boolean isEs24horas() {
-        return es24horas;
+    public boolean isTieneAscensor() {
+        return tieneAscensor;
     }
 
-    public void setEs24horas(boolean es24horas) {
-        this.es24horas = es24horas;
+    public void setTieneAscensor(boolean tieneAscensor) {
+        this.tieneAscensor = tieneAscensor;
     }
 
-    public void agregarTrabajador(Trabajador trabajador){
-    trabajadores.add(trabajador);
+    public ArrayList<Persona> getTrabajadores() {
+        return trabajadores;
     }
 
-    public int cantidadTrabajadores(){
-        int cantidad = trabajadores.size();
-        return cantidad;
+    public void setTrabajadores(ArrayList<Persona> trabajadores) {
+        this.trabajadores = trabajadores;
     }
 
-    public Trabajador empleadoMayorAntiguedad(){
-        Trabajador trabajadorMasViejo = new Trabajador();
-        for (Trabajador t : trabajadores){
-            for (LocalDate fecha : t.getRegisterDate()){
+    public void agregarTrabajador(Persona trabajador){
+        trabajadores.add(trabajador);
+    }
 
+    public void cantidadTrabajadores(){
+        System.out.println("La cantidad de trabajadores es: "+trabajadores.size());
+    }
+
+    public Persona empleadoMayorAntiguedad(){
+        Persona trabajadorMayorAntiguedad = new Persona(); //Esto lo puedo usar teniendo en cuenta que en el constructor por defecto le pongo de fecha de ingreso hoy, por ende, la antiguedad va a ser 0
+        for (Persona trabajador: trabajadores) {
+            if (trabajador.antiguedad() >= trabajadorMayorAntiguedad.antiguedad()){ //Ahora les pregunto a ustedes, por qué el >=? Es lo mismo que este el igual o no? Cambia algo?
+                trabajadorMayorAntiguedad = trabajador;
+            }
         }
-        return trabajadorMasViejo;
+        return trabajadorMayorAntiguedad;
     }
 
     public static void main(String[] args) {
-        Trabajador t1 = new Trabajador("Miguel", "Lopez", 32987990,
-                LocalDate.of(1985, 10, 12),
-                LocalDate.of(2020, 5, 8));
-        Trabajador t2 = new Trabajador("Juana", "Gomez", 39987990,
-                LocalDate.of(1986, 7, 28));
-        Trabajador t3 = new Trabajador("Candela", "Navarro", 40987990,
-                LocalDate.of(1993, 2, 4),
-                LocalDate.of(2017, 5, 25));
+            Persona p1 = new Persona("Miguel", "Lopez", 32987990,
+                    LocalDate.of(1985, 10, 12), LocalDate.of(2020, 5, 8));
+            Persona p2 = new Persona("Juana", "Gomez", 39987990,
+                    LocalDate.of(1986, 7, 28));
+            Persona p3 = new Persona("Candela", "Navarro", 40987990,
+                    LocalDate.of(1993, 2, 4), LocalDate.of(2017, 5, 25));
 
-        BancoNacion sucursalUrquiza = new BancoNacion("Av. Triunvirato 3450", true, false);
-        BancoNacion sucursalPueyrredon = new BancoNacion("Cochrane 2874", true, true);
-        BancoNacion sucursalDevoto = new BancoNacion();
+            BancoNacion sucursalUrquiza = new BancoNacion("Av. Triunvirato 3450", true, false);
+            BancoNacion sucursalPueyrredon = new BancoNacion("Cochrane 2874", true, true);
 
-        ArrayList<BancoNacion> sucursales = new ArrayList<>();
+            ArrayList<BancoNacion> sucursales = new ArrayList<>();
 
-        sucursales.add(sucursalUrquiza);
-        sucursales.add(sucursalPueyrredon);
+            sucursales.add(sucursalUrquiza);
+            sucursales.add(sucursalPueyrredon);
 
-        sucursalUrquiza.agregarTrabajador(t1);
-        sucursalPueyrredon.agregarTrabajador(t2);
-        sucursalDevoto.agregarTrabajador(t3);
+            sucursalUrquiza.agregarTrabajador(p1);
+            sucursalUrquiza.agregarTrabajador(p3);
+            sucursalPueyrredon.agregarTrabajador(p2);
 
-        sucursalPueyrredon.cantidadTrabajadores();
+            sucursalPueyrredon.cantidadTrabajadores();
 
-        for (BancoNacion b : sucursales) {
-            Trabajador t = b.empleadoMayorAntiguedad();
-            System.out.println(t.getNombre() + " trabaja aca desde " + t.antiguedad());
+            for (BancoNacion b : sucursales) {
+                Persona p = b.empleadoMayorAntiguedad();
+                System.out.println(p.getNombre() + " " + p.antiguedad());
+            }
         }
+
     }
-}

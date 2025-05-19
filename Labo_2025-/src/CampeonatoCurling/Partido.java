@@ -10,7 +10,7 @@ public class Partido {
     private Equipo equipoVisitante;
 
     public Partido(){
-        this.diaPartido = ;
+        //this.diaPartido =;
         this.equipoLocal = new Equipo();
     }
 

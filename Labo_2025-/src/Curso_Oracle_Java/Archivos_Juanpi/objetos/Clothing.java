@@ -1,4 +1,4 @@
-package objetos;
+package Curso_Oracle_Java.Archivos_Juanpi.objetos;
 
 public class Clothing {
     private String description;

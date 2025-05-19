@@ -56,12 +56,13 @@ public class VideoClub {
 
     public Pelicula duracionPeliculaMasLarga() {
         String nombreAux = "";
-        Pelicula peliculaAux = peliculas.get(0);
-        int indice = peliculas.get(0).getDuracion();
-        for (int i = 0; i < peliculas.size(); i++) {
-            if (indice < peliculas.get(i).getDuracion()) {
-                indice = peliculas.get(i).getDuracion();
-                peliculaAux = peliculas.get(i);
+        Estanteria estanteria = new Estanteria();
+        Pelicula peliculaAux = estanteria.getPeliculas().get(0);
+        int indice = estanteria.getPeliculas().get(0).getDuracion();
+        for (int i = 0; i < estanteria.getPeliculas().size(); i++) {
+            if (indice < estanteria.getPeliculas().get(i).getDuracion()) {
+                indice = estanteria.getPeliculas().get(i).getDuracion();
+                peliculaAux = estanteria.getPeliculas().get(i);
             }
         }
         return peliculaAux;

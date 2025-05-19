@@ -1,13 +1,19 @@
-package Unidad1;
-import java.util.Scanner;
-public class Circulo {
+package Figuras;
+
+public class Circulo extends Figura {
     private double radio;
 
+
     public Circulo() {
+        super();
         this.radio = 5;
     }
 
     public Circulo(double radio) {
+        this.radio = radio;
+    }
+    public Circulo(double area, double perimetro, double radio) {
+        super(area, perimetro);
         this.radio = radio;
     }
 

@@ -1,71 +1,95 @@
 package Unidad1;
-import java.util.Scanner;
 
-public class Persona {
+import java.time.LocalDate;
+
+public class Persona{
     private String nombre;
-    private int edad;
-    private String direccion;
+    private String apellido;
+    private int dni;
 
-    public Persona(){
-        this.nombre = "Joaquin";
-        this.edad = 46;
-        this.direccion = "Av. de Los Incas 3279";
+    private String pais;
+    private LocalDate fechaNacimiento;
+    private LocalDate fechaIngresoAlBanco;
+    private int edad;
+
+    public Persona() {
+        this.nombre = "";
+        this.apellido = "";
+        this.dni = 00;
+        this.fechaNacimiento = LocalDate.now();
+        this.fechaIngresoAlBanco = LocalDate.now();
+    }
+    public Persona(String nombre, String apellido, int dni, LocalDate fechaNacimiento, LocalDate fechaIngresoAlBanco) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.fechaNacimiento = fechaNacimiento;
+        this.fechaIngresoAlBanco = fechaIngresoAlBanco;
+    }
+    //Se usa para dar de alta con la fecha de hoy a empleados.
+    public Persona(String nombre, String apellido, int dni, LocalDate fechaNacimiento) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.fechaNacimiento = fechaNacimiento;
+        this.fechaIngresoAlBanco = LocalDate.now();
     }
 
-    public Persona(String nombre, int edad, String direccion){
+    public  Persona(String nombre, int edad, String pais){
         this.nombre = nombre;
         this.edad = edad;
-        this.direccion = direccion;
+        this.pais = pais;
     }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public int getEdad(){
-        return edad;
-    }
-
-    public String getDireccion(){
-        return direccion;
-    }
-
-    public void setNombre(String nombre){
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setEdad(int edad){
-        this.edad = edad;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setDireccion(String direccion){
-        this.direccion = direccion;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    public void imprimirDatos(){
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Edad: " + getEdad());
-        System.out.println("Direccion: " + getDireccion());
+    public int getDni() {
+        return dni;
     }
 
-    public String mostrarDatosPersona(){
-        return (nombre+", "+edad+", "+direccion);
+    public void setDni(int dni) {
+        this.dni = dni;
     }
 
-    public static void main(String[] args) {
-        String nombre = "";
-        int edad = 0;
-        String direccion = "";
-        Persona p1 = new Persona();
-        Persona p2 = new Persona(nombre, edad, direccion);
-
-        p2.setNombre("Juan Pablo");
-        p2.setEdad(17);
-        p2.setDireccion("Av. San Martin 6782");
-
-        p1.imprimirDatos();
-        p2.imprimirDatos();
-
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public LocalDate getFechaIngresoAlBanco() {
+        return fechaIngresoAlBanco;
+    }
+
+    public void setFechaIngresoAlBanco(LocalDate fechaIngresoAlBanco) {
+        this.fechaIngresoAlBanco = fechaIngresoAlBanco;
+    }
+
+    public int antiguedad(){
+        return LocalDate.now().getYear() - fechaIngresoAlBanco.getYear();
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void mostrarDatosPersona() {
+        System.out.println(this.nombre + ", "+ this.edad +", " + this.pais);
+    }
 }

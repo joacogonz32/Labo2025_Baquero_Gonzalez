@@ -1,5 +1,7 @@
 package CampeonatoCurling;
 import Unidad1.Fecha;
+import Unidad1.Persona;
+
 import java.util.ArrayList;
 
 public class Jugador{

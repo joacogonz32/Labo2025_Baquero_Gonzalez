@@ -1,6 +1,6 @@
 package objetos;
 
-public class Clothing {
+public class Clothing2 {
     private String description;
     private double price;
     private String size = "M";
@@ -8,7 +8,7 @@ public class Clothing {
     private final double MIN_TAX = 0.2;
 
 //CONTRSUCTOR
-    public Clothing(double price, String description, String size) {
+    public Clothing2(double price, String description, String size) {
         this.price = price;
         this.description = description;
         this.size = size;

@@ -1,24 +1,24 @@
 package persona;
-import objetos.Clothing;
-public class Customer {
+
+public class Customer2 {
     private String name;
     private String size;
-    private Clothing[] items;
+    private objetos.Clothing2[] items;
 
-    public Customer(String name, int measurement) {
+    public Customer2(String name, int measurement) {
         this.name = name;
         setSize(measurement);
     }
 
-    public void addItems(Clothing[] listaItems){
+    public void addItems(objetos.Clothing2[] listaItems){
         items = listaItems;// definida en shoapp
     }
-    public Clothing[] getItems() {
+    public objetos.Clothing2[] getItems() {
         return items;
     }
     public double getTotalClothingCost() {
         double total = 0;
-        for (Clothing item : items) {
+        for (objetos.Clothing2 item : items) {
             //if (size.equals(ropa.getSize())){
             total += item.getPrice();
             // System.out.println(item.getDescription() + ", " + item.getSize() + ", " + item.getPrice());

@@ -1,59 +1,36 @@
 package Arrays;
 import Unidad1.Fecha;
 import Arrays.Materias;
+import Unidad1.Persona;
+
+import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Alumno {
-    private String nombre;
-    private String apellido;
-    private Fecha fechaNacimiento;
+public class Alumno extends Persona {
     private ArrayList<Integer> listaNotas;
     private ArrayList<Materias> materiaInscripto;
 
     public Alumno(){
-        this.nombre = "Juan";
-        this.apellido = "Baquero";
-        this.fechaNacimiento = new Fecha(30, 4, 2008);
+        super("Juan","Baquero",88,LocalDate.of(30, 4, 2008));
         this.listaNotas = new ArrayList<Integer>();
         this.listaNotas.add(4);
         this.listaNotas.add(5);
         this.listaNotas.add(7);
         this.materiaInscripto = new ArrayList<Materias>();
-        this.materiaInscripto.add("Matematica", new ArrayList<String>(), new ArrayList<Alumno>());
-        this.materiaInscripto.add("Lengua");
-        this.materiaInscripto.add("Ingles");
     }
 
-    public Alumno(String nombre, String apellido, Fecha fechaNacimiento, ArrayList<Integer> listaNotas) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.fechaNacimiento = fechaNacimiento;
+    public Alumno(String nombre, String apellido, int dni, LocalDate fechaNacimiento, ArrayList<Integer> listaNotas) {
+        super();
         this.listaNotas = listaNotas;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-    public String getApellido() {
-        return apellido;
-    }
-    public Fecha getFechaNacimiento() {
-        return fechaNacimiento;
-    }
+
     public ArrayList<Integer> getListaNotas() {
         return listaNotas;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-    public void setFechaNacimiento(Fecha fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
     public void setListaNotas(ArrayList<Integer> listaNotas) {
         this.listaNotas = listaNotas;
     }
@@ -86,17 +63,6 @@ public class Alumno {
     }
 
         public static void main(String[] args) throws Exception {
-            Fecha fechaJuanpi = new Fecha(30, 4, 2008);
-            ArrayList<Integer> listaNotas = new ArrayList<Integer>();
-            listaNotas.add(4);
-            listaNotas.add(5);
-            listaNotas.add(7);
-            Alumno alumno = new Alumno("Ana", "Gómez", fechaJuanpi, listaNotas);
 
-            alumno.agregarMateria(Matematica);
-            alumno.agregarNota(8);
-            System.out.println("Notas: " + alumno.getListaNotas());
-            System.out.println("Menor nota: " + alumno.menorNota());
-            System.out.println("Mayor nota: " + alumno.mayorNota());
         }
     }

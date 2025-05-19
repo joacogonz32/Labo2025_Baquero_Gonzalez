@@ -1,6 +1,8 @@
 package Arrays;
 import Unidad1.Fecha;
 import Arrays.Alumno;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Materias {
@@ -42,18 +44,34 @@ public class Materias {
     public void setInscriptos(ArrayList<Alumno> inscriptos) {
         this.alumnosInscriptos = inscriptos;
     }
-
+/*
     public double promedioEdadAlumnos(){
 
     }
 
-    public double promedioNotasAlumnos(){
+    public double promedioNotasAlumnos() {
 
     }
 
+ */
     public static void main(String[] args) {
-        ArrayList<String> contenidosMatematica = new ArrayList<String>("Limites", "Funciones");
+        LocalDate fechaJuanpi = new LocalDate.of(2008,4,30);
+        ArrayList<Integer> listaNotas = new ArrayList<>();
+        listaNotas.add(4);
+        listaNotas.add(5);
+        listaNotas.add(7);
+        Alumno alumno = new Alumno("Ana", "Gómez", 48680605, fechaJuanpi, listaNotas);
+        ArrayList<String> contenidos = new ArrayList<>();
+        contenidos.add("limites");
+        contenidos.add("funciones");
+        ArrayList<Alumno> alumnos = new ArrayList<>();
+        alumnos.add(alumno);
+        Materias matematica = new Materias("matematica",contenidos,alumnos);
 
-        Materias Matematica = new Materias("Matematica", new ArrayList<>())
+        alumno.agregarMateria(matematica);
+        alumno.agregarNota(8);
+        System.out.println("Notas: " + alumno.getListaNotas());
+        System.out.println("Menor nota: " + alumno.menorNota());
+        System.out.println("Mayor nota: " + alumno.mayorNota());
     }
 }
