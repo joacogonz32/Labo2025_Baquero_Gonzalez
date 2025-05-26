@@ -55,7 +55,7 @@ public class Materias {
 
  */
     public static void main(String[] args) {
-        LocalDate fechaJuanpi = new LocalDate.of(2008,4,30);
+        LocalDate fechaJuanpi = LocalDate.of(2008, 4, 30);
         ArrayList<Integer> listaNotas = new ArrayList<>();
         listaNotas.add(4);
         listaNotas.add(5);

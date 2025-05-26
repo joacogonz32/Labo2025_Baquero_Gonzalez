@@ -1,5 +1,5 @@
 package Curso_Oracle_Java.Archivos_Juanpi.objetos;
-
+/*
 public class ShopApp{
     public static void main(String[] args) {
         double total = 0.0, tax = 0.2;
@@ -24,6 +24,6 @@ public class ShopApp{
             System.out.println(item.getDescription());
         }
 
-
     }
 }
+            */
