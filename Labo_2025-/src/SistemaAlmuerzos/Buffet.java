@@ -94,8 +94,7 @@ public class Buffet {
             }
         }
         ArrayList<Plato> top3 = new ArrayList<>();
-        int limite = Math.min(3, todosPlatos.size());
-        for (int i = 0; i < limite; i++) {
+        for (int i = 0; i < 3; i++) {
             top3.add(todosPlatos.get(i));
         }
 
