@@ -121,22 +121,18 @@ public class Buffet {
         platosPedido3.add(plato3);
         platosPedido3.add(plato4);
 
-        // Crear personas (aquí puedes usar Persona o Profesor si tienes esa clase)
         Persona persona1 = new Persona("Juan", "Perez");
         Persona persona2 = new Persona("Ana", "Gomez");
 
-        // Crear pedidos con fecha de hoy
         Pedido pedido1 = new Pedido(platosPedido1, LocalDate.now(), "Pendiente", LocalTime.of(13, 0), persona1);
         Pedido pedido2 = new Pedido(platosPedido2, LocalDate.now(), "Entregado", LocalTime.of(14, 0), persona2);
         Pedido pedido3 = new Pedido(platosPedido3, LocalDate.now(), "Pendiente", LocalTime.of(15, 0), persona1);
 
-        // Crear Buffet y agregar pedidos
         Buffet buffet = new Buffet();
         buffet.agregarPedido(pedido1);
         buffet.agregarPedido(pedido2);
         buffet.agregarPedido(pedido3);
-
-        // Mostrar pedidos que hay que cocinar hoy
+        
         System.out.println("Pedidos para cocinar hoy:");
         ArrayList<Pedido> pedidosHoy = buffet.porCocinarHoy();
         for (Pedido p : pedidosHoy) {
@@ -146,11 +142,9 @@ public class Buffet {
             }
         }
 
-        // Mostrar platos con descuento si hay (requiere que Persona o Profesor esté implementado)
         System.out.println("\nPlatos con descuento de pedidos de hoy:");
         buffet.mostrarPlatosConDescuentoDePedidosHoy();
-
-        // Mostrar top 3 platos más pedidos
+        
         System.out.println("\nTop 3 platos más pedidos:");
         ArrayList<Plato> top3 = buffet.top3masPedidos();
         for (int i = 0; i < top3.size(); i++) {
