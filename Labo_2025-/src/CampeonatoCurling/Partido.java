@@ -5,7 +5,7 @@ import CampeonatoCurling.Jugador;
 
 public class Partido {
     private String diaPartido;
-    private String horario;
+    private TurnoValido horario;
     private Equipo equipoLocal;
     private Equipo equipoVisitante;
 
@@ -14,7 +14,7 @@ public class Partido {
         this.equipoLocal = new Equipo();
     }
 
-    public Partido(String diaPartido, String horario, Equipo equipoLocal, Equipo equipoVisitante) {
+    public Partido(String diaPartido, TurnoValido horario, Equipo equipoLocal, Equipo equipoVisitante) {
         this.diaPartido = diaPartido;
         this.horario = horario;
         this.equipoLocal = equipoLocal;

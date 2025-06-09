@@ -1,20 +1,22 @@
 package Unidad1;
+import java.awt.*;
 import java.util.Scanner;
+import Colores.Color;
 
 public class Coche {
     private String marca;
     private String modelo;
-    private String color;
+    private Color color;
     private double velocidad;
 
     public Coche(){
         this.marca = "Fiat";
         this.modelo = "Cronos";
-        this.color = "Gris";
+        this.color = Color.ROJO;
         this.velocidad = 50.0;
     }
 
-    public Coche(String marca, String modelo, String color, double velocidad){
+    public Coche(String marca, String modelo, Color color, double velocidad){
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
@@ -29,7 +31,7 @@ public class Coche {
         return modelo;
     }
 
-    public String getColor(){
+    public Color getColor(){
         return color;
     }
 
@@ -45,7 +47,7 @@ public class Coche {
         this.modelo = modelo;
     }
 
-    public void setColor(String color){
+    public void setColor(Color color){
         this.color = color;
     }
 
@@ -76,7 +78,7 @@ public class Coche {
     public void mostrarDatos(){
         System.out.println("La marca del coche es " + getMarca());
         System.out.println("La modelo del coche es " + getModelo());
-        System.out.println("La color del coche es " + getColor());
+        System.out.println("La color del coche es " + getColor().getCodigoColor());
         System.out.println("La velocidad del coche es " + getVelocidad());
     }
 
@@ -85,14 +87,14 @@ public class Coche {
     public static void main(String[] args) {
         String marca = "";
         String modelo = "";
-        String color = "";
+        Color color = Color.AZUL;
         double velocidad = 0.0;
         Coche c1 = new Coche();
         Coche c2 = new Coche(marca, modelo, color, velocidad);
 
         c2.setMarca("BMW");
         c2.setModelo("M3 Competition");
-        c2.setColor("Negro");
+        c2.setColor(Color.NEGRO);
         c2.setVelocidad(230.5);
 
         c1.acelerar();

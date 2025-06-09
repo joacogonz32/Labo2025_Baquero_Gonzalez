@@ -1,13 +1,13 @@
 package Unidad1;
 import java.time.LocalDate;
-import java.util.Scanner;
+import java.util.Deque;
 
 public class Libro {
     private String titulo;
     private Persona autor;
     private int ISBN;
     private int cantPaginas;
-    private String editorial;
+    private EditorialValida editorial;
     private Fecha fechaPublicado;
 
     public Libro(){
@@ -15,11 +15,11 @@ public class Libro {
         this.autor = new Persona();
         this.ISBN = 167;
         this.cantPaginas = 382;
-        this.editorial = "Santillana";
+        this.editorial = EditorialValida.INTERZONA_SUR;
         this.fechaPublicado = new Fecha();
     }
 
-    public Libro(String titulo, Persona autor, int ISBN, int cantPaginas, String editorial, Fecha fechaPublicado){
+    public Libro(String titulo, Persona autor, int ISBN, int cantPaginas, EditorialValida editorial, Fecha fechaPublicado){
         this.titulo = titulo;
         this.autor = autor;
         this.ISBN = ISBN;
@@ -44,7 +44,7 @@ public class Libro {
         return cantPaginas;
     }
 
-    public String getEditorial() {
+    public EditorialValida getEditorial() {
         return editorial;
     }
 
@@ -68,7 +68,7 @@ public class Libro {
         this.cantPaginas = cantPaginas;
     }
 
-    public void setEditorial(String editorial) {
+    public void setEditorial(EditorialValida editorial) {
         this.editorial = editorial;
     }
 
@@ -85,27 +85,24 @@ public class Libro {
         System.out.println("Fecha publicado: " + fechaPublicado.getMes()+"-" + fechaPublicado.getMes()+ "-" +fechaPublicado.getDia());
     }
 
-    public void comparaFechas(Libro fecha) {
+    public void comparaFechas(LocalDate fecha) {
         getFechaPublicado();
         this.fechaPublicado.mayorQue(fechaPublicado);
         }
 
     public static void main(String[] args) {
         String titulo = "";
-        Libro fecha;
         Persona autor = new Persona();
         int ISBN = 0;
         int cantPaginas = 0;
-        String editorial = "";
+        EditorialValida editorial = EditorialValida.EL_ATENEO;
         Fecha fechaPublicado = new Fecha();
         Libro l1 = new Libro();
         Libro l2 = new Libro(titulo, autor, ISBN, cantPaginas, editorial, fechaPublicado);
-/*
+        LocalDate fecha1 = LocalDate.of(2025,04,30);
         l1.mostrarInfo();
-        l1.comparaFechas();
+        l1.comparaFechas(fecha1);
         l2.mostrarInfo();
-        l2.comparaFechas();
-        */
-
+        l2.comparaFechas(fecha1);
     }
 }

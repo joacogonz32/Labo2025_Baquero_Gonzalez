@@ -1,13 +1,15 @@
-package FlotaVehiculos;
+package SistemaFlota;
+
+import Colores.Color;
 
 public class Vehiculo {
     private String marca;
     private String modelo;
-    private String color;
+    private Color color;
     private int cRuedas;
     private int anioFabricacion;
 
-    public Vehiculo(String marca, String modelo, String color, int cantRuedas, int anioFabricacion) {
+    public Vehiculo(String marca, String modelo, Color color, int cantRuedas, int anioFabricacion) {
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
@@ -18,12 +20,12 @@ public class Vehiculo {
     public Vehiculo(){
         this.marca = "Toyota";
         this.modelo = "Gt 86";
-        this.color = "Rojo Ocaso";
+        this.color = Color.ROJO;
         this.cRuedas = 4;
         this.anioFabricacion = 2024;
     }
 
-    public Vehiculo(String marca, String modelo, String color, int cRuedas, int anioFabricacion, String patente, int carga, int cargaMax){
+    public Vehiculo(String marca, String modelo, Color color, int cRuedas, int anioFabricacion, String patente, int carga, int cargaMax){
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
@@ -43,10 +45,10 @@ public class Vehiculo {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
     public int getCantRuedas() {

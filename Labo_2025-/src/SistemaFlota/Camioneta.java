@@ -1,21 +1,26 @@
-package FlotaVehiculos;
+package SistemaFlota;
+
+import Colores.Color;
+import org.junit.jupiter.engine.discovery.predicates.IsNestedTestClass;
+
+import java.time.LocalDate;
 
 public class Camioneta extends Vehiculo {
     private String patente;
     private int carga;
-    private int cargaMax;
+    private int cagaMax;
 
-    public Camioneta(String marca, String modelo, String color, int cRuedas, int anioFabricacion, String patente, int carga, int cargaMax) {
-        super(marca, modelo, color, cRuedas, anioFabricacion, patente, carga, cargaMax);
+    public Camioneta(String marca, String modelo, Color color, int cRuedas, int anioFabricacion, String patente, int carga, int cagaMax) {
+        super(marca, modelo, color, cRuedas, anioFabricacion);
         this.patente = patente;
         this.carga = carga;
-        this.cargaMax = cargaMax;
+        this.cagaMax=cagaMax;
     }
     public Camioneta(){
         super();
         this.patente="AA 984 HT";
         this.carga=50;
-        this.cargaMax=80;
+        this.cagaMax=80;
     }
 
     public Camioneta(String patente, int carga) {
@@ -39,7 +44,7 @@ public class Camioneta extends Vehiculo {
         this.carga = carga;
     }
     public void añadirCarga(int carga){
-        if (this.carga+carga >this.cargaMax){
+        if (this.carga+carga >this.cagaMax){
             System.out.println("exediste el limite de peso");
         }
         else{

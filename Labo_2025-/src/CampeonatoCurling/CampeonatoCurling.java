@@ -39,7 +39,7 @@ public class CampeonatoCurling {
             for (int j = 0; j < equipos.size(); j++) {
                 Equipo equipoLocal = equipos.get(i);
                 Equipo equipoVisitante = equipos.get(j);
-                String turno = obtenerTurnoIgual(equipoLocal, equipoVisitante);
+                TurnoValido turno = obtenerTurnoIgual(equipoLocal, equipoVisitante);
                 if (turno != null) {
                     fixture.add(new Partido(diasSemana[diaIndex % diasSemana.length], turno, equipoLocal, equipoVisitante));
                     diaIndex++;
@@ -51,7 +51,7 @@ public class CampeonatoCurling {
             }
         }
 
-    public String obtenerTurnoIgual(Equipo equipoLocal, Equipo equipoVisitante) {
+    public TurnoValido obtenerTurnoIgual(Equipo equipoLocal, Equipo equipoVisitante) {
         if (equipoLocal.getDisponibilidad().equals(equipoVisitante.getDisponibilidad())) {
             return equipoLocal.getDisponibilidad();
         }
@@ -66,12 +66,15 @@ public class CampeonatoCurling {
 
     public static void main(String[] args) {
 
+        TurnoValido turno1 = TurnoValido.MAÑANA;
+        TurnoValido turno2 = TurnoValido.TARDE;
+        TurnoValido turno3 = TurnoValido.NOCHE;
 
-        Equipo equipo2 = new Equipo("Mañana");
-        Equipo equipo3 = new Equipo("Tarde");
-        Equipo equipo4 = new Equipo("Noche");
-        Equipo equipo5 = new Equipo("Tarde");
-        Equipo equipo6 = new Equipo("Mañana");
-        Equipo equipo7 = new Equipo("Noche");
+        Equipo equipo2 = new Equipo(turno1);
+        Equipo equipo3 = new Equipo(turno2);
+        Equipo equipo4 = new Equipo(turno3);
+        Equipo equipo5 = new Equipo(turno2);
+        Equipo equipo6 = new Equipo(turno1);
+        Equipo equipo7 = new Equipo(turno3);
     }
 }
