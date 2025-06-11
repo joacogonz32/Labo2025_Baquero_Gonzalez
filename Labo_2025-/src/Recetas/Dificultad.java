@@ -1,5 +1,5 @@
 package Recetas;
 
 public enum Dificultad {
-    FACIL, INTERMEDIO, DIFICIL;
+    FACIL, INTERMEDIA, DIFICIL;
 }

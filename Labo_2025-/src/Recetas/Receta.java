@@ -1,5 +1,4 @@
 package Recetas;
-
 import java.util.ArrayList;
 
 public abstract class Receta {
@@ -27,4 +26,9 @@ public abstract class Receta {
         this.dificultad = dificultad;
     }
     abstract void mostrarInstrucciones();
+
+    public void filtraPorTipo(String tipo){
+
+    }
+
 }
