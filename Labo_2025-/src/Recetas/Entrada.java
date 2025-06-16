@@ -3,33 +3,34 @@ package Recetas;
 import java.util.ArrayList;
 
 public class Entrada extends Receta{
-
     private Temperatura temp;
-
-    public Entrada(ArrayList<String> listaPasos, Dificultad dificultad) {
+    public Entrada(ArrayList<String> listaPasos, Dificultad dificultad, Temperatura temp) {
         super(listaPasos, dificultad);
+        this.temp = temp;
     }
 
     public Temperatura getTemp() {
         return temp;
     }
-
     public void setTemp(Temperatura temp) {
         this.temp = temp;
     }
 
+    @Override
     public void mostrarInstrucciones(){
-        String aux = "";
-        for(String p : getListaPasos()){
-            aux.concat(p);
-        }
         if(temp == Temperatura.FRIA){
-            aux.concat("Guardar en la heladera");
+            System.out.println("Guardar en la heladera");
         }
-        else{
-            aux.concat("Prender el horno");
+        for(String p : getListaPasos()){
+            System.out.println("- " + p);
         }
-        System.out.println(aux);
+        if (temp == Temperatura.CALIENTE){
+            System.out.println("Prender el horno");
+        }
     }
 
+    @Override
+    public boolean esDelTipo(Receta receta){
+        return true;
+    }
 }
