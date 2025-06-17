@@ -1,5 +1,5 @@
 package VideoClub;
-import Unidad1.Persona;
+import Persona.Persona;
 import java.util.ArrayList;
 
 public class Pelicula {

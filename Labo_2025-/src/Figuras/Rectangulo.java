@@ -1,8 +1,8 @@
 package Figuras;
 
 public class Rectangulo extends Figura{
-    private double base = 0.0;
-    private double altura = 0.0;
+    private double base;
+    private double altura;
 
     public Rectangulo(){
         super();
@@ -10,8 +10,8 @@ public class Rectangulo extends Figura{
         this.altura = 4;
     }
 
-    public Rectangulo(double area, double perimetro, double base, double altura){
-        super(area,perimetro);
+    public Rectangulo( double base, double altura){
+        super();
         this.base = base;
         this.altura = altura;
     }
@@ -32,12 +32,13 @@ public class Rectangulo extends Figura{
         this.altura = altura;
     }
 
+    @Override
     public double calcularArea(){
         double area = 0.0;
         area = base * altura;
         return area;
     }
-
+    @Override
     public double calcularPerimetro(){
         double perimetro = 0.0;
         perimetro = base*2 + altura*2;
@@ -50,11 +51,12 @@ public class Rectangulo extends Figura{
         double area = 0.0;
         double perimetro = 0.0;
         Rectangulo r1 = new Rectangulo();
-        Rectangulo r2 = new Rectangulo(area, perimetro,base, altura);
+        Rectangulo r2 = new Rectangulo(base, altura);
 
         System.out.println("Base: " + r1.getBase());
         System.out.println("Altura: " + r1.getAltura());
         System.out.println("Area: " + r1.calcularArea());
         System.out.println("Perimetro: " + r1.calcularPerimetro());
+
     }
 }

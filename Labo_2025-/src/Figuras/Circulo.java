@@ -2,7 +2,7 @@ package Figuras;
 
 public class Circulo extends Figura {
     private double radio;
-
+    private static double pi = Math.PI;
 
     public Circulo() {
         super();
@@ -24,16 +24,16 @@ public class Circulo extends Figura {
     public void setRadio(double radio){
         this.radio = radio;
     }
-
+    @Override
     public double calcularArea(){
         double area = 0.0;
-        area = 3.14 * (radio*radio);
+        area = pi * (radio*radio);
         return area;
     }
-
+    @Override
     public double calcularPerimetro(){
         double perimetro = 0.0;
-        perimetro = 2 * (3.14 * radio);
+        perimetro = 2 * (pi * radio);
         return perimetro;
     }
     public static void main(String[] args) {

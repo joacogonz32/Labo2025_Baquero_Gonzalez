@@ -1,6 +1,7 @@
 package Unidad1;
+import Persona.Persona;
+
 import java.time.LocalDate;
-import java.util.Deque;
 
 public class Libro {
     private String titulo;

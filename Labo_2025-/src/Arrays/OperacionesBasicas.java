@@ -1,5 +1,6 @@
 package Arrays;
-import Unidad1.Persona;
+import Unidad1.EnumPais;
+import Persona.Persona;
 import java.util.ArrayList;
 
 public class OperacionesBasicas {
@@ -38,10 +39,10 @@ public class OperacionesBasicas {
 
 
         ArrayList<Persona> personas = new ArrayList<Persona>();
-        personas.add(new Persona("juan",17,"mi casa"));
-        personas.add(new Persona("joaco",30,"su casa"));
-        personas.add(new Persona("julian",46,"su casa"));
-        personas.add(new Persona("jose",48,"su casa"));
+        personas.add(new Persona("juan",17, EnumPais.ARGENTINA));
+        personas.add(new Persona("joaco",30,EnumPais.AUSTRALIA));
+        personas.add(new Persona("julian",46,EnumPais.AUSTRALIA));
+        personas.add(new Persona("jose",48,EnumPais.AUSTRALIA));
 
         ArrayList<String> palabras = new ArrayList<String>();
         palabras.add("Escalera");

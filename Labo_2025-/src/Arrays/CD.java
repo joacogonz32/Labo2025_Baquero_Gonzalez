@@ -1,9 +1,8 @@
 package Arrays;
 import Unidad1.Cancion;
-import Unidad1.Persona;
+import Persona.Persona;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CD {
     private String titulo;

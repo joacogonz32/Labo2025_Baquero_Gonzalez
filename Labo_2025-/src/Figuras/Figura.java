@@ -1,6 +1,6 @@
 package Figuras;
 
-public class Figura {
+public abstract class Figura {
     private double area;
     private double perimetro;
     public Figura() {
@@ -27,13 +27,7 @@ public class Figura {
     public void setPerimetro(double perimetro) {
         this.perimetro = perimetro;
     }
-    public double calcularArea(){
-        double area = 0.0;
-        return area;
-    }
+    public abstract double calcularArea();
 
-    public double calcularPerimetro(){
-        double perimetro = 0.0;
-        return perimetro;
-    }
+    public abstract double calcularPerimetro();
 }

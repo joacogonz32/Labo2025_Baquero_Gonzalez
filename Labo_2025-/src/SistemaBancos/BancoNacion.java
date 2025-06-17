@@ -1,7 +1,7 @@
 package SistemaBancos;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import Unidad1.Persona;
+import Persona.Persona;
 public class BancoNacion {
     private String direccion;
     private boolean tieneCajerosAutomaticos; //acá va lo que quieran. En el main no especificaba

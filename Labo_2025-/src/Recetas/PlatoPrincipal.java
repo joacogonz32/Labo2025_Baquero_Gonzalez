@@ -1,14 +1,13 @@
 package Recetas;
+
 import java.util.ArrayList;
 
 public class PlatoPrincipal extends Receta {
     private int tiempoCoccion;
     private int cantComensales;
 
-    public PlatoPrincipal(ArrayList<String> listaPasos, Dificultad dificultad, int tiempoCoccion, int cantComensales) {
+    public PlatoPrincipal(ArrayList<String> listaPasos, Dificultad dificultad) {
         super(listaPasos, dificultad);
-        this.tiempoCoccion = tiempoCoccion;
-        this.cantComensales = cantComensales;
     }
 
     public int getTiempoCoccion() {
@@ -25,16 +24,16 @@ public class PlatoPrincipal extends Receta {
     }
 
     @Override
-    public void mostrarInstrucciones() {
-        System.out.println("Esta receta tarda en cocinarse: " + this.tiempoCoccion + "y los pasos son: ");
+    void mostrarInstrucciones() {
+        String aux = "";
         for (String p : getListaPasos()){
-            System.out.println("- " + p);
+            aux.concat(p);
         }
+        System.out.println("Esta receta tarda en cocinarse: " + this.tiempoCoccion + "y los pasos son: " + aux);
     }
 
     @Override
-    public boolean esDelTipo(Receta receta){
-        return true;
-    }
-
+    public TipoReceta getTipo(){
+        return TipoReceta.PLATOPRINCPAL;
+    };
 }
