@@ -1,5 +1,4 @@
 package SistemaAlmuerzos;
-import SistemaAlmuerzos.*;
 import Unidad1.*;
 
 import java.time.LocalDate;
@@ -9,19 +8,11 @@ import java.util.ArrayList;
 public class Pedido {
     private ArrayList<Plato> platoPedido;
     private LocalDate fechaCreado;
-    private String estadoEntrega;
+    private Estado estadoEntrega;
     private LocalTime horaEntrega;
     private Persona solicitante;
 
-    public Pedido(){
-        this.platoPedido = new ArrayList<>();
-        this.fechaCreado = LocalDate.of(2025,5,20);
-        this.estadoEntrega = "Pendiente";
-        this.horaEntrega = LocalTime.of(22,0);
-        this.solicitante = new Persona("Joaquin", "Gonzalez");
-    }
-
-    public Pedido(ArrayList<Plato> platoPedido, LocalDate fechaCreado, String estadoEntrega, LocalTime horaEntrega, Persona solicitante){
+    public Pedido(ArrayList<Plato> platoPedido, LocalDate fechaCreado, Estado estadoEntrega, LocalTime horaEntrega, Persona solicitante){
         this.platoPedido = platoPedido;
         this.fechaCreado = fechaCreado;
         this.estadoEntrega = estadoEntrega;
@@ -43,10 +34,10 @@ public class Pedido {
         this.fechaCreado = fechaCreado;
     }
 
-    public String getEstadoEntrega() {
+    public Estado getEstadoEntrega() {
         return estadoEntrega;
     }
-    public void setEstadoEntrega(String estadoEntrega) {
+    public void setEstadoEntrega(Estado estadoEntrega) {
         this.estadoEntrega = estadoEntrega;
     }
 

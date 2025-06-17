@@ -1,6 +1,7 @@
+package ComputadorasPersonalizadas;
 import java.util.ArrayList;
 
-public class Periferico extends Componente{
+public abstract class Periferico extends Componente{
     private ArrayList<String> puertos;
 
     public Periferico(String fabricante, String modelo, double precioBase, int stock

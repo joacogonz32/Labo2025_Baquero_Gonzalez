@@ -1,5 +1,4 @@
 package TiendaElectronicos;
-import TiendaElectronicos.*;
 
 public class EquipoSonido extends Producto {
     private boolean tieneBluetooth;

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
     public class TestAlarmas {
-
         private SensorHumo sensorHumo;
         private SensorTemp sensorTemp;
         private SensorPresion sensorPresion;

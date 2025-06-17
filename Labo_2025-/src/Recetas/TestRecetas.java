@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
-class RestauranteTest {
+public class TestRecetas {
     private Restaurante restaurante;
 
     @BeforeEach
@@ -52,7 +52,7 @@ class RestauranteTest {
     }
 
     @Test
-    void testBorrarReceta() {
+    void testBorrarReceta(){
         restaurante.borrarReceta(pizza);
         assertEquals(2, restaurante.cantidadRecetas());
         assertFalse(restaurante.getRecetas().contains(pizza));

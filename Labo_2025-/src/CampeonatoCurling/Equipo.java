@@ -3,14 +3,14 @@ import java.util.ArrayList;
 
 public class Equipo{
     private String nombreEquipo;
-    private String barrio;
+    private Barrio barrio;
     private ArrayList<Jugador> jugadores;
     private Jugador capitan;
     private TurnoValido disponibilidad;
 
     public Equipo(){
         this.nombreEquipo = "Equipo 1";
-        this.barrio = "Buenos Aires";
+        this.barrio = Barrio.AGRONOMIA;
         this.jugadores = new ArrayList<>();
         this.capitan = new Jugador();
         this.disponibilidad = TurnoValido.TARDE;
@@ -19,16 +19,19 @@ public class Equipo{
     // Constructor por parametro (usa solo disponibilidad)
     public Equipo(TurnoValido horario){
         this.nombreEquipo = "Equipo Aux";
-        this.barrio = "Buenos Aires";
+        this.barrio = Barrio.ALMAGRO;
         this.jugadores = new ArrayList<>();
         this.disponibilidad = disponibilidad;
     }
 
-    public Equipo(String nombreEquipo, String barrio, Jugador jugadores, TurnoValido disponibilidad){
+    public Equipo(String nombreEquipo, Barrio barrio, Jugador jugadores, TurnoValido disponibilidad){
         this.nombreEquipo = nombreEquipo;
         this.barrio = barrio;
         this.jugadores = new ArrayList<>();
         this.disponibilidad = disponibilidad;
+    }
+
+    public Equipo(String viejardas, String coghlan, TurnoValido turnoValido) {
     }
 
     public String getNombreEquipo() {
@@ -39,11 +42,11 @@ public class Equipo{
         this.nombreEquipo = nombreEquipo;
     }
 
-    public String getBarrio() {
+    public Barrio getBarrio() {
         return barrio;
     }
 
-    public void setBarrio(String barrio) {
+    public void setBarrio(Barrio barrio) {
         this.barrio = barrio;
     }
 
@@ -65,5 +68,18 @@ public class Equipo{
 
     public static void main(String[] args) {
 
+    }
+
+    public void agregarJugador(Jugador j1) {
+        jugadores.add(j1);
+    }
+
+    public void definirCapitan(Jugador jugador) {
+        if (jugadores.contains(jugador)) {
+            this.capitan = jugador;
+            System.out.println(jugador.getApellido() + " ahora es el capitán del equipo " + this.nombreEquipo);
+        } else {
+            System.out.println("El jugador no pertenece al equipo y no puede ser capitán.");
+        }
     }
 }

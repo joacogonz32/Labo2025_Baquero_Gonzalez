@@ -1,7 +1,7 @@
 package AlarmaEdificio;
 import java.time.LocalDate;
 
-public class Sensor{
+public abstract class Sensor{
     private boolean estado;
     private double medida;
     private double umbralInicial;
@@ -23,8 +23,6 @@ public class Sensor{
     public LocalDate getFechaAdquisicion() {return fechaAdquisicion;}
     public void setFechaAdquisicion(LocalDate fechaAdquisicion) {this.fechaAdquisicion = fechaAdquisicion;}
 
-    public void suenaAlarma(){
-        System.out.println("*Alarma sonando*");
-    }
+    public abstract void suenaAlarma();
 
 }

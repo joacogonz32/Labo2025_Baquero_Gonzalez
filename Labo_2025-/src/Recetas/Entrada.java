@@ -1,5 +1,4 @@
 package Recetas;
-
 import java.util.ArrayList;
 
 public class Entrada extends Receta{

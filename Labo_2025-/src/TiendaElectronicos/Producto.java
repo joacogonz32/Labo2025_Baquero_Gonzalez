@@ -1,7 +1,6 @@
 package TiendaElectronicos;
-import TiendaElectronicos.*;
 
-public class Producto {
+public abstract class Producto {
     private String nombre;
     private double precio;
     private int stock;
@@ -15,7 +14,6 @@ public class Producto {
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -23,7 +21,6 @@ public class Producto {
     public double getPrecio() {
         return precio;
     }
-
     public void setPrecio(double precio) {
         this.precio = precio;
     }
@@ -31,7 +28,6 @@ public class Producto {
     public int getStock() {
         return stock;
     }
-
     public void setStock(int stock) {
         this.stock = stock;
     }

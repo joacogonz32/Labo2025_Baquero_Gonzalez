@@ -1,3 +1,5 @@
+package ComputadorasPersonalizadas;
+
 public class Tarjeta extends MetodoPago{
     private int numeroTarjeta;
     private String titular;

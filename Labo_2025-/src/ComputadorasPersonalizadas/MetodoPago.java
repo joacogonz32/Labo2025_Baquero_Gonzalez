@@ -1,6 +1,5 @@
-public class MetodoPago {
+package ComputadorasPersonalizadas;
 
-    public double precioFinal(double montoBase){
-        return 0;
-    }
+public abstract class MetodoPago {
+    public abstract double precioFinal(double montoBase);
 }

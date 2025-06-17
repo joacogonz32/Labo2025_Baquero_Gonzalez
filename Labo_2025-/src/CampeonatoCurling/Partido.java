@@ -1,7 +1,7 @@
 package CampeonatoCurling;
-import Unidad1.Fecha;
-import CampeonatoCurling.Equipo;
-import CampeonatoCurling.Jugador;
+
+
+import java.time.LocalDate;
 
 public class Partido {
     private String diaPartido;
@@ -19,6 +19,9 @@ public class Partido {
         this.horario = horario;
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
+    }
+
+    public Partido(Equipo e1, Equipo e2, LocalDate now, TurnoValido turnoValido) {
     }
 
     public static void main(String[] args) {

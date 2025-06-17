@@ -1,4 +1,6 @@
-public class Componente {
+package ComputadorasPersonalizadas;
+
+public abstract class Componente {
     private String fabricante;
     private String modelo;
     private double precio;

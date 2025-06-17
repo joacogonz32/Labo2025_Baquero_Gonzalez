@@ -34,8 +34,8 @@ public class TestAlmuerzo {
         platosPedido2.add(plato2);
         platosPedido2.add(plato3);
 
-        pedido1 = new Pedido(platosPedido1, LocalDate.now(), "Pendiente", LocalTime.of(13, 0), persona1);
-        pedido2 = new Pedido(platosPedido2, LocalDate.now().minusDays(1), "Entregado", LocalTime.of(14, 0), persona1);
+        pedido1 = new Pedido(platosPedido1, LocalDate.now(), Estado.PENDIENTE, LocalTime.of(13, 0), persona1);
+        pedido2 = new Pedido(platosPedido2, LocalDate.now().minusDays(1), Estado.ENTREGADO, LocalTime.of(14, 0), persona1);
 
         buffet.agregarPedido(pedido1);
         buffet.agregarPedido(pedido2);
@@ -55,7 +55,7 @@ public class TestAlmuerzo {
 
     @Test
     public void testEditarPedido() {
-        Pedido nuevoPedido = new Pedido(pedido1.getPlatoPedido(), LocalDate.now(), "Entregado", LocalTime.of(14,0), persona1);
+        Pedido nuevoPedido = new Pedido(pedido1.getPlatoPedido(), LocalDate.now(), Estado.ENTREGADO, LocalTime.of(14,0), persona1);
         buffet.editarPedido(nuevoPedido, pedido1);
         assertTrue(buffet.getPedidos().contains(nuevoPedido));
         assertFalse(buffet.getPedidos().contains(pedido1));

@@ -1,5 +1,4 @@
 package TiendaElectronicos;
-import TiendaElectronicos.*;
 
 public class CargadoresPortatiles extends Producto{
     private int cantCargas;

@@ -1,3 +1,5 @@
+package ComputadorasPersonalizadas;
+
 public class Venta {
     private Persona cliente;
     private Computadora computadora;

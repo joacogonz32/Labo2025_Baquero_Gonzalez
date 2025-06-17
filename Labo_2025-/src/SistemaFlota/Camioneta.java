@@ -1,9 +1,5 @@
 package SistemaFlota;
-
 import Colores.Color;
-import org.junit.jupiter.engine.discovery.predicates.IsNestedTestClass;
-
-import java.time.LocalDate;
 
 public class Camioneta extends Vehiculo {
     private String patente;

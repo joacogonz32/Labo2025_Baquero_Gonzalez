@@ -1,6 +1,5 @@
 package SistemaAlmuerzos;
 import Unidad1.Persona;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -124,9 +123,9 @@ public class Buffet {
         Persona persona1 = new Persona("Juan", "Perez");
         Persona persona2 = new Persona("Ana", "Gomez");
 
-        Pedido pedido1 = new Pedido(platosPedido1, LocalDate.now(), "Pendiente", LocalTime.of(13, 0), persona1);
-        Pedido pedido2 = new Pedido(platosPedido2, LocalDate.now(), "Entregado", LocalTime.of(14, 0), persona2);
-        Pedido pedido3 = new Pedido(platosPedido3, LocalDate.now(), "Pendiente", LocalTime.of(15, 0), persona1);
+        Pedido pedido1 = new Pedido(platosPedido1, LocalDate.now(), Estado.PENDIENTE, LocalTime.of(13, 0), persona1);
+        Pedido pedido2 = new Pedido(platosPedido2, LocalDate.now(), Estado.ENTREGADO, LocalTime.of(14, 0), persona2);
+        Pedido pedido3 = new Pedido(platosPedido3, LocalDate.now(), Estado.CANCELADO, LocalTime.of(15, 0), persona1);
 
         Buffet buffet = new Buffet();
         buffet.agregarPedido(pedido1);

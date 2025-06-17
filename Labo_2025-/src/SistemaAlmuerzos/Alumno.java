@@ -21,11 +21,5 @@ public class Alumno extends Persona{
         this.division = division;
     }
 
-
-
-    public static void main(String[] args) {
-
-    }
-
 }
 

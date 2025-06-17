@@ -1,3 +1,5 @@
+package ComputadorasPersonalizadas;
+
 import java.util.ArrayList;
 
 public class Entrada extends Periferico{

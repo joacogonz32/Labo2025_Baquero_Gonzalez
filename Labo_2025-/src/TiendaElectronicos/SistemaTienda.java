@@ -1,10 +1,11 @@
 package TiendaElectronicos;
-import TiendaElectronicos.*;
-
 import java.util.ArrayList;
 
 public class SistemaTienda {
     private ArrayList<Producto> dispositivos;
+
+    public ArrayList<Producto> getDispositivos() {return dispositivos;}
+    public void setDispositivos(ArrayList<Producto> dispositivos) {this.dispositivos = dispositivos;}
 
     public void agregarDispositivo(Producto dispositivo){
         dispositivos.add(dispositivo);
@@ -36,11 +37,5 @@ public class SistemaTienda {
         }
 
         return stockMayor;
-    }
-
-    
-
-    public static void main(String[] args) {
-
     }
 }

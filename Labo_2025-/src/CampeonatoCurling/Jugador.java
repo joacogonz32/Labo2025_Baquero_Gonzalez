@@ -1,8 +1,7 @@
 package CampeonatoCurling;
 import Unidad1.Fecha;
-import Unidad1.Persona;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 
 public class Jugador{
     private String apellido;
@@ -21,6 +20,9 @@ public class Jugador{
         this.fechaNacimiento = fechaNacimiento;
         this.dorsal = dorsal;
 
+    }
+
+    public Jugador(String alberto, LocalDate of, int dorsal) {
     }
 
     public String getApellido() {
@@ -50,4 +52,6 @@ public class Jugador{
     public static void main(String[] args) {
 
     }
+
+
 }
