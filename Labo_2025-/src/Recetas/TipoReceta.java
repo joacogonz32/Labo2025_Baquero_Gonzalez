@@ -1,5 +1,5 @@
 package Recetas;
 
 public enum TipoReceta {
-    ENTRADA,POSTRE, PLATOPRINCPAL;
+    ENTRADA, POSTRE, PLATOPRINCPAL;
 }

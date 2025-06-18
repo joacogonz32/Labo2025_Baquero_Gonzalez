@@ -33,6 +33,6 @@ public abstract class Receta {
 
     public abstract TipoReceta getTipo();
 
-
+    public abstract boolean esDelTipo(Receta recetaTipo);
 
 }

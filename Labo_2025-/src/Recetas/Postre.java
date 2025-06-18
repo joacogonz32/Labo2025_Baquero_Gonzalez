@@ -1,5 +1,4 @@
 package Recetas;
-
 import java.util.ArrayList;
 
 public class Postre extends Receta {
@@ -13,7 +12,6 @@ public class Postre extends Receta {
     public int getTemperatura() {
         return temperatura;
     }
-
     public void setTemperatura(int temperatura) {
         this.temperatura = temperatura;
     }
@@ -21,14 +19,13 @@ public class Postre extends Receta {
     public boolean isAptoDiabeticos() {
         return aptoDiabeticos;
     }
-
     public void setAptoDiabeticos(boolean aptoDiabeticos) {
         this.aptoDiabeticos = aptoDiabeticos;
     }
 
     @Override
     public void mostrarInstrucciones() {
-        String aux = "Mantener la cocina limpia y ordernar";
+        String aux = "Mantener la cocina limpia y ordenar ";
         for (String p : getListaPasos()) {
             System.out.println(p + aux);
         }
@@ -36,5 +33,9 @@ public class Postre extends Receta {
     @Override
     public TipoReceta getTipo(){
         return TipoReceta.POSTRE;
+    };
+    @Override
+    public boolean esDelTipo(Receta recetaTipo){
+        return recetaTipo.getTipo() == this.getTipo();
     };
 }

@@ -1,6 +1,6 @@
 package Recetas;
 import java.util.ArrayList;
-import Recetas.Dificultad;
+
 public class Restaurante {
     private ArrayList<Receta> recetas;
 
@@ -52,12 +52,14 @@ public class Restaurante {
         }
         return recetamaspasos;
     }
-    public void filtrarPorReceta(Receta receta){
+    public ArrayList<Receta> filtrarPorReceta(Receta receta){
+        ArrayList<Receta> recetasfiltradas = new ArrayList<>();
         for (Receta r : recetas){
-            if(r.getTipo() == receta.getTipo()){
-                System.out.println(r.mostrarReceta());
+            if(receta.esDelTipo(r)){
+                recetasfiltradas.add(r);
             }
         }
+        return recetasfiltradas;
     }
 
 

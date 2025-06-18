@@ -1,5 +1,4 @@
 package Recetas;
-
 import java.util.ArrayList;
 
 public class PlatoPrincipal extends Receta {
@@ -27,7 +26,7 @@ public class PlatoPrincipal extends Receta {
     void mostrarInstrucciones() {
         String aux = "";
         for (String p : getListaPasos()){
-            aux.concat(p);
+            aux = aux.concat(p + " ");;
         }
         System.out.println("Esta receta tarda en cocinarse: " + this.tiempoCoccion + "y los pasos son: " + aux);
     }
@@ -35,5 +34,9 @@ public class PlatoPrincipal extends Receta {
     @Override
     public TipoReceta getTipo(){
         return TipoReceta.PLATOPRINCPAL;
+    };
+    @Override
+    public boolean esDelTipo(Receta recetaTipo){
+        return recetaTipo.getTipo() == this.getTipo();
     };
 }

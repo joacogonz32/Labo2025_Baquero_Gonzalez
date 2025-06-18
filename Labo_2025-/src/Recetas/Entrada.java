@@ -1,5 +1,4 @@
 package Recetas;
-
 import java.util.ArrayList;
 
 public class Entrada extends Receta{
@@ -13,7 +12,6 @@ public class Entrada extends Receta{
     public Temperatura getTemp() {
         return temp;
     }
-
     public void setTemp(Temperatura temp) {
         this.temp = temp;
     }
@@ -24,15 +22,20 @@ public class Entrada extends Receta{
             aux.concat(p);
         }
         if(temp == Temperatura.FRIA){
-            aux.concat("Guardar en la heladera");
+            aux = aux.concat("Guardar en la heladera");
         }
         else{
-            aux.concat("Prender el horno");
+            aux = aux.concat("Prender el horno");
         }
         System.out.println(aux);
     }
     @Override
     public TipoReceta getTipo(){
         return TipoReceta.ENTRADA;
+    };
+
+    @Override
+    public boolean esDelTipo(Receta recetaTipo){
+        return recetaTipo.getTipo() == this.getTipo();
     };
 }
