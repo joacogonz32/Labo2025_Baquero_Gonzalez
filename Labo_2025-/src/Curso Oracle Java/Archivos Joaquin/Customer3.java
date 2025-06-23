@@ -1,4 +1,4 @@
-package Curso_Oracle_Java.Archivos_Juanpi.persona;
+package Curso_Oracle_Java.Archivos_Joaquin.persona;
 
 public class Customer {
     private String name;
