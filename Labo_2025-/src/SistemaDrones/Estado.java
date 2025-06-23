@@ -1,2 +1,5 @@
-package SistemaDrones;public enum Estado {
+package SistemaDrones;
+
+public enum Estado {
+    OPERANDO, INACTIVO;
 }
