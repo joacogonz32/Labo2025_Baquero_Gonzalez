@@ -1,27 +1,33 @@
 package GestionMascotas;
 
 public class Pajaro extends Mascota{
-    private boolean esCantor;
+    private int nivelAlegria;
 
-    public Pajaro(String nombre, Dueño dueño) {
+    public Pajaro(String nombre, Dueño dueño, int nivelAlegria) {
         super(nombre, dueño);
+        this.nivelAlegria = nivelAlegria;
     }
 
-    public String tipoCanto(String canto) {
-        String aux = "";
-        if (esCantor) {
-            aux = canto;
-        }
-        return aux;
-    }
+    public int getNivelAlegria() {return nivelAlegria;}
+    public void setNivelAlegria(int nivelAlegria) {this.nivelAlegria = nivelAlegria;}
 
     @Override
     public String saludar(Dueño dueño){
+        String saludo = "Pio";
         if (getDueño() == dueño){
-            return ;
+            for (int i = 0; i < nivelAlegria; i++) {
+                saludo.concat(", " + "Pio");
+            }
+            if (nivelAlegria > 0){
+                nivelAlegria--;
+            }
+            else {
+                System.out.println("La alegria esta en 0, no puede disminuir.");
+            }
+            return "Pio";
         }
         else{
-            return null;
+            return "El pajaro no saludo.";
         }
     }
     @Override
@@ -32,8 +38,14 @@ public class Pajaro extends Mascota{
     public boolean esDelTipo(Mascota tipoMascota){
         return tipoMascota.getTipo() == this.getTipo();
     }
-
-    public static void main(String[] args) {
-
+    @Override
+    public void seAlimenta(){
+        this.nivelAlegria++;
     }
+
+    @Override
+    public boolean estoyMuerto(){
+        return false;
+    }
+
 }
