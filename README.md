@@ -1,1 +1,2 @@
-# Labo2025_Baquero_Gonzalez
+# Ejercicios del Laboratorio de Programacion
+Gonzalez Parodi y Baquero
