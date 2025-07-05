@@ -1,2 +1,3 @@
-# Ejercicios del Laboratorio de Programacion
-Gonzalez Parodi y Baquero
+# Laboratorio Programacion 2025
+En este repositorio estan todos los ejercicios que se hicieron en esta materia durante el anio
+Gonzalez P. y Baquero
