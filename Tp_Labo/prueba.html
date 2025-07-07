@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pruebas FC Barcelona</title>
+  <link rel="stylesheet" href="prueba.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="bg-dark text-white py-3">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center">
+      <img src="imagenes/barcelona-logo.png" alt="FC Barcelona" width="60" height="60" class="me-3">
+      <h1 class="h4 m-0">FC Barcelona – Pruebas de Jugadores</h1>
+    </div>
+    <nav>
+      <a href="#formulario" class="btn btn-outline-light">Anotarse</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container my-5">
+  <section class="mb-5">
+    <h2>¡Unite al Barça!</h2>
+    <p>
+      El FC Barcelona está en búsqueda de nuevos talentos para sus categorías inferiores.  
+      Si tenés pasión por el fútbol, habilidades destacadas y soñás con vestir la camiseta blaugrana, esta es tu oportunidad.
+    </p>
+    <p>
+      A continuación podés completar el formulario de inscripción para participar en las pruebas oficiales del club.
+    </p>
+  </section>
+
+  <section id="formulario">
+    <h3>Formulario de Inscripción</h3>
+    <form action="procesar_formulario.php" method="POST" class="row g-3 mt-3">
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="number" class="form-control" id="edad" name="edad" min="6" max="23" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="posicion" class="form-label">Posición en el campo</label>
+        <select class="form-select" id="posicion" name="posicion" required>
+          <option value="">Seleccionar...</option>
+          <option value="Arquero">Arquero</option>
+          <option value="Defensor">Defensor</option>
+          <option value="Mediocampista">Mediocampista</option>
+          <option value="Delantero">Delantero</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label for="pais" class="form-label">País de origen</label>
+        <input type="text" class="form-control" id="pais" name="pais" required>
+      </div>
+
+      <div class="col-12">
+        <label for="comentarios" class="form-label">Comentarios o experiencia previa</label>
+        <textarea class="form-control" id="comentarios" name="comentarios" rows="3"></textarea>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar inscripción</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  © 2025 FC Barcelona – Todos los derechos reservados
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
