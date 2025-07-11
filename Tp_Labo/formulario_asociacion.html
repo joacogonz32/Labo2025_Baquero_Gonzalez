@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FC Barcelona | Asociarse</title>
+    <link rel="stylesheet" href="css/formulario_asociacion.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <img src="imagenes/barcelona-logo.png" alt="FC Barcelona" width="60" height="60" class="me-3">
+        <h1 class="h4 m-0">FC Barcelona</h1>
+      </div>
+      <nav>
+        <a href="#formulario" class="btn btn-outline-light">Anotarse</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section class="mb-5">
+      <h2>¡Unite al Barça!</h2>
+      <p>
+        El FC Barcelona está en búsqueda de nuevos talentos para sus categorías inferiores.  
+        Si tenés pasión por el fútbol, habilidades destacadas y soñás con vestir la camiseta blaugrana, esta es tu oportunidad.
+      </p>
+      <p>
+        A continuación podés completar el formulario de inscripción para participar en las pruebas oficiales del club.
+      </p>
+    </section>
+    
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Enviar inscripción</button>
+        </div>
+      </form>
+
+      <form action = "http://localhost:3000/insertar" method="get" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input name= "nombre" type="text" class="form-control" id="validationCustom01" value="Mark" required>
+          <div class="valid-feedback">
+            Se ve bien!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido</label>
+          <input name= "apellido" type="text" class="form-control" id="validationCustom02" value="Otto" required>
+          <div class="valid-feedback">
+            Se ve bien!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Edad</label>
+          <div class="input-group has-validation">
+            <input name= "edad" type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Eliga una edad.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Pais</label>
+          <input name="pais" type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select name= "planElegido" class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">selecionar...</option>
+            <option>Premium</option>
+            <option>Elite</option>
+            <option>Regular</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+      
+    </section>
+
+    
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    © 2025 FC Barcelona – Todos los derechos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+</html>
