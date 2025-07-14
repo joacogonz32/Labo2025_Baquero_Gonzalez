@@ -6,9 +6,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 
 app.get('/insertar', (req, res) => {
-    let nombre = (req.query.nombre);
-    let apellido = (req.query.apellido);
-    let edad = (req.query.edad);
+    let nombre = (req.query.nombreCompleto);
+    let apellido = (req.query.mail);
+    let edad = (req.query.dni);
     let pais = (req.query.pais);
     let planElegido = (req.query.planElegido);
     var mysql      = require('mysql');
@@ -21,7 +21,7 @@ var connection = mysql.createConnection({
  
 connection.connect();
  
-connection.query("insert into Inscripcion values(null,'"+nombre+"','"+apellido+"',"+edad+",'"+pais+"','"+planElegido+"')" , function (error, results, fields) {
+connection.query("insert into Inscripcion values(null,'"+nombreCompleto+"','"+mail+"',"+dni+",'"+pais+"','"+planElegido+"')" , function (error, results, fields) {
   if (error) throw error;
   // agregar q vuelva a la pagina inicio
   res.send("Inscripccion realizada");
