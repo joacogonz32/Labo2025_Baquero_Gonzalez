@@ -121,15 +121,19 @@
 
   .body-container-form{
     color: #eee;
-    background-image: url(Imagenes/camp-nou-1-fcb-logo.jpg);
+    background-image: url(/img/camp-nou-1-fcb-logo.jpg);
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
   
   }
   .equipo-fondo{
-    background-image: url(Imagenes/fondoDegrade.jpg);
+    background-image: url(/img/fondo-degradado-colores-fcb.jpg);
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
+  }
+
+  .card-img-fcb-players{
+    object-fit: cover;
   }

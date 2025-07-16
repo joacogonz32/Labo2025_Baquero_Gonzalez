@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FC Barcelona | Inicio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -32,12 +32,13 @@
           </div>
         </div>
       -->
+      <div class = "posicionFija sticky-top">
       <header class="bg-barca text-white py-2 sticky-top">
       <div class="text-center">
         <div class="row fila-container">
           <div class="col">
-            <a href="index.html">
-            <img src="/Imagenes/logo_fcb.svg" alt="Escudo FC Barcelona" class="img-fluid"  style="max-height: 70px;">
+            <a href="/html/index.html">
+            <img src="/img/logo_fcb.svg" alt="Escudo FC Barcelona" class="img-fluid"  style="max-height: 70px;">
           </a>
           </div>
           <div class="col">
@@ -60,16 +61,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="/html/index.html">Inicio</a>
                     </li>
-                    <!-- Equipo (desplegable) -->
+                  
                     <li class="nav-item">
-                        <a class="nav-link" href="#plantilla">Equipo</a>
+                        <a class="nav-link" href="/html/equipo.html">Equipo</a>
                     </li>
 
-                    <!-- Anotarse -->
+                  
                     <li class="nav-item">
-                      <a class="nav-link" href="#Anotarse">Anotarse</a>
+                      <a class="nav-link" href="/html/formulario_asociacion.html">Anotarse</a>
                   </li>
 
                   
@@ -96,6 +97,7 @@
             </div>
         </div>
     </nav>
+  </div>
     <main class="intro-barca text-white">
     
         <div id="carouselExampleIndicators" class="carousel slide">
@@ -106,13 +108,13 @@
             </div>
             <div class="carousel-inner carrousel">
             <div class="carousel-item active">
-                <img src="/Imagenes/Low-camp-nou.webp" class="d-block w-100 imagenCarrousel" alt="campo">
+                <img src="/img/low-camp-nou.jpg" class="d-block w-100 imagenCarrousel" alt="campo">
             </div>
             <div class="carousel-item">
-                <img src="/Imagenes/campnou_calle_ext (1).jpg" class="d-block w-100 imagenCarrousel" alt="...">
+                <img src="/img/campnou-calle-ext.jpg" class="d-block w-100 imagenCarrousel" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/Imagenes/SET_Jugadors (1).jpg" class="d-block w-100 imagenCarrousel" alt="jugadores">
+                <img src="/img/set-jugadores.jpg" class="d-block w-100 imagenCarrousel" alt="jugadores">
             </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -127,24 +129,29 @@
     </main>
     <div class="card-group">
       <div class="card">
-        <img src="/Imagenes/trofeos" class="card-img-top" alt="...">
+        <img src="/img/palmares-trofeos.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Nuestros trofeos</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">Conocé la historia que hizo grande al FC Barcelona: una trayectoria llena de pasión, esfuerzo y gloria. 
+            Reviví los momentos más emblemáticos, los títulos inolvidables y las leyendas que marcaron el camino de uno de los clubes más importantes del mundo.</p>
         </div>
       </div>
       <div class="card">
-        <img src="/Imagenes/plantilla.jpg" class="card-img-top" id="plantilla">
+        <a href="/html/equipo.html">
+        <img src="/img/plantilla_fcb.jpg" class="card-img-top" alt="Plantilla" id="plantilla">
+        </a>
         <div class="card-body">
           <h5 class="card-title">Nuestra plantilla</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text">Descubrí nuestro once inicial, formado por los jugadores que representan la esencia y el espíritu del FC Barcelona. 
+            Ellos son los encargados de defender nuestros colores con pasión, entrega y compromiso en cada partido.</p>
         </div>
       </div>
       <div class="card">
-        <img src="Imagenes/indumentaria.jpeg" class="card-img-top" alt="...">
+        <img src="/img/indumentaria.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Nuestra indumentaria</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text">Conocé nuestra indumentaria oficial, diseñada con materiales de máxima calidad y pensada para brindar comodidad, resistencia y estilo. 
+            Ya seas hincha, jugador o coleccionista, llevá los colores del Barça con orgullo en cada momento.</p>
         </div>
       </div>
     </div>  
@@ -153,13 +160,30 @@
       <div class="container">
         <h2 class="mb-4" id="Anotarse">¿Quieres ser miembro de nuestra gran comunidad?</h2>
         <p class="lead">Forma parte del FC Barcelona y vive la pasión como nunca antes.</p>
-        <a href="formulario_asociacion.html" class="btn btn-warning btn-lg mt-3">Anotarse</a>
+        <a href="/html/formulario_asociacion.html" class="btn btn-warning btn-lg mt-3">Anotarse</a>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        © 2025 FC Barcelona – Todos los derechos reservados
+    <footer class="bg-dark text-white text-center py-3 ">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Sobre nostros</a></p>
+          </div>
+          <div class="col">
+            <p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"> Terminos y condiciones</a></p>
+          </div>
+          <div class="col">
+            <a class="icon-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+              </svg>
+              Nuestro Instagram
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
