@@ -33,70 +33,44 @@
         </div>
       -->
       <div class = "posicionFija sticky-top">
-      <header class="bg-barca text-white py-2 sticky-top">
+       <!-- Header -->
+  <header class="barca-header bg-barca text-white py-3 sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="/html/index.html">
+        <img src="/img/logo_fcb.svg" alt="Escudo FC Barcelona" class="img-fluid" style="max-height: 60px;">
+      </a>
       <div class="text-center">
-        <div class="row fila-container">
-          <div class="col">
-            <a href="/html/index.html">
-            <img src="/img/logo_fcb.svg" alt="Escudo FC Barcelona" class="img-fluid"  style="max-height: 70px;">
-          </a>
-          </div>
-          <div class="col">
-            "Més que un club"
-          </div>
-          <div class="col">
-            FC BARCELONA
-          </div>
-        </div>
+        <h4 class="mb-0">FC Barcelona</h4>
+        <h5 class="mb-0">"Més que un club"</h5>
       </div>
-      </header> 
+      <div></div> 
+    </div>
+  </header>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-granate">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/html/index.html">Inicio</a>
-                    </li>
-                  
-                    <li class="nav-item">
-                        <a class="nav-link" href="/html/equipo.html">Equipo</a>
-                    </li>
-
-                  
-                    <li class="nav-item">
-                      <a class="nav-link" href="/html/formulario_asociacion.html">Anotarse</a>
-                  </li>
-
-                  
-                </ul>
-                <!-- Barra de búsqueda a la derecha de UiVerse-->
-
-                <div class="InputContainer">
-                    <input
-                    placeholder="Search"
-                    id="input"
-                    class="input"
-                    name="text"
-                    type="text"
-                    />
-                
-                    <label class="labelforsearch" for="input">
-                    <svg class="searchIcon" viewBox="0 0 512 512">
-                        <path
-                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                        ></path>
-                    </svg>
-                    </label>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-granate sticky-top">
+    <div class="container position-relative">
+      <div class="d-flex align-items-center">
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav flex-lg-row flex-column text-start align-items-start w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="/html/index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/equipo.html">Equipo</a>
+          </li>
+        </ul>
+      </div>
+      <div class="search-toggle ms-auto">
+        <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+        <input id="searchBar" class="search-input" type="text" placeholder="Buscar..." onblur="hideSearch()" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">
+      </div>
+    </div>
+  </nav>
   </div>
     <main class="intro-barca text-white">
     
