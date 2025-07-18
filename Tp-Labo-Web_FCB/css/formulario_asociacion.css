@@ -1,182 +1,103 @@
-:root {
-    --color-principal: #07396b;
-    --color-secundario: #580404;
-    --color-terceario: #FDB813;
-}
 
-.bg-barca {
-    background-color: var(--color-principal) !important; /* Azul oscuro Barça */
-}
 
-.bg-granate {
-    background-color: var(--color-secundario) !important; /* Granate oficial */
-}
 
-.navbar .nav-link:hover {
-    color: var(--color-terceario) !important; /* Amarillo oro al pasar el mouse */
-}
-
-h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-/* Header */
-header h4 {
-  font-size: 2rem;
-  margin-bottom: 0;
-}
-
-header h5 {
-  font-size: 1rem;
-  color: #FDB813;
-  margin-top: 0.25rem;
-}
-
-/* Navbar */
-.bg-granate {
-  background-color: #A50044;
-}
-
-.navbar .nav-link {
-  color: #ffffff;
-  transition: color 0.2s;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
-  color: #FDB813 !important;
-}
-
-/* Barra de búsqueda */
-form[role="search"] input[type="search"] {
-  border: 2px solid #FDB813;
-  border-radius: 25px;
-  background-color: transparent;
-  color: #fff;
-  padding: 0.5rem 1rem;
-}
-
-form[role="search"] input::placeholder {
-  color: #FDB813;
-}
-
-/* Formulario */
-form label {
-  font-weight: bold;
-}
-
-.form-control,
-.form-select {
-  background-color: #2a0505;
-  border: 1px solid #FDB813;
-  color: #fff;
-}
-
-.form-control:focus,
-.form-select:focus {
-  border-color: #FDB813;
-  box-shadow: 0 0 0 0.2rem rgba(253, 184, 19, 0.25);
-}
-
-.form-check-input {
-  accent-color: #FDB813;
-  margin-right: 0.5rem;
-}
-
-.form-check {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.invalid-feedback {
-  color: #ffbdbd;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-.btn-primary {
-  background-color: #A50044;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #8b0039;
-}
-
-footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-}
-
-select {
-  max-height: 200px;
-  overflow-y: auto;
-  scrollbar-color: #FDB813 transparent;
-  scrollbar-width: thin;
-}
-
-.was-validated .form-check-input:invalid ~ .invalid-feedback {
-  display: block;
-  position: relative;
-  margin-top: 0.2rem;
-  font-size: 0.8rem;
-  color: #ffbdbd;
-}
-
-.search-toggle {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.search-input {
-  border: 2px solid #FDB813;
-  border-radius: 25px;
-  background: transparent;
-  color: #FDB813;
-  padding: 0.5rem 1.2rem;
-  font-size: 1rem;
-  width: 0;
-  opacity: 0;
-  transition: width 0.3s, opacity 0.3s;
-  margin-left: 8px;
-  outline: none;
-  box-shadow: none;
-}
-
-.search-input.show {
-  width: 220px;
-  opacity: 1;
-}
-
-.search-input::placeholder {
-  color: #FDB813;
-  opacity: 1;
-}
-
-.search-icon {
-  color: #FDB813;
-  font-size: 1.3rem;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.search-input.show + .search-icon {
-  opacity: 0;
-  pointer-events: none;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px);}
-  to { opacity: 1; transform: translateY(0);}
-}
-
-.barca-header.sticky-top {
-  z-index: 1040;
-}
-.navbar.sticky-top {
-  top: 93.58px; 
-  z-index: 1030;
-}
+/* Tipografía general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa; /* fondo claro suave */
+    color: #222;
+  }
+  
+  /* Encabezado */
+  header {
+    border-bottom: 4px solid #a50044; /* borde en color blaugrana */
+  }
+  
+  header h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  /* Botón de anotarse */
+  header nav a.btn-outline-light {
+    border-color: #a50044;
+    color: #a50044;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header nav a.btn-outline-light:hover,
+  header nav a.btn-outline-light:focus {
+    background-color: #a50044;
+    color: #fff;
+    border-color: #7a0032;
+  }
+  
+  /* Títulos principales */
+  h2, h3 {
+    color: #a50044;
+    font-weight: 700;
+  }
+  
+  /* Sección principal */
+  main section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* Formulario */
+  form label {
+    font-weight: 600;
+    color: #444;
+  }
+  
+  form input.form-control,
+  form select.form-select,
+  form textarea.form-control {
+    border: 2px solid #a50044;
+    transition: border-color 0.3s;
+  }
+  
+  form input.form-control:focus,
+  form select.form-select:focus,
+  form textarea.form-control:focus {
+    border-color: #7a0032;
+    box-shadow: 0 0 8px #7a0032aa;
+    outline: none;
+  }
+  
+  /* Botón enviar */
+  form button.btn-primary {
+    background-color: #a50044;
+    border-color: #a50044;
+    font-weight: 700;
+    padding: 0.6rem 1.5rem;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  form button.btn-primary:hover,
+  form button.btn-primary:focus {
+    background-color: #7a0032;
+    border-color: #7a0032;
+    box-shadow: 0 0 12px #7a0032aa;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    border-top: 2px solid #a50044;
+  }
+  
+  /* Imagen logo header */
+  header img {
+    border-radius: 50%;
+    border: 2px solid #a50044;
+    transition: transform 0.3s;
+  }
+  
+  header img:hover {
+    transform: scale(1.1);
+  }
+  

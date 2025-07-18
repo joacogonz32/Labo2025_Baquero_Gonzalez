@@ -33,44 +33,70 @@
         </div>
       -->
       <div class = "posicionFija sticky-top">
-       <!-- Header -->
-  <header class="barca-header bg-barca text-white py-3 sticky-top">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a href="/html/index.html">
-        <img src="/img/logo_fcb.svg" alt="Escudo FC Barcelona" class="img-fluid" style="max-height: 60px;">
-      </a>
+      <header class="bg-barca text-white py-2 sticky-top">
       <div class="text-center">
-        <h4 class="mb-0">FC Barcelona</h4>
-        <h5 class="mb-0">"Més que un club"</h5>
+        <div class="row fila-container">
+          <div class="col">
+            <a href="/html/index.html">
+            <img src="/img/logo_fcb.svg" alt="Escudo FC Barcelona" class="img-fluid"  style="max-height: 70px;">
+          </a>
+          </div>
+          <div class="col">
+            "Més que un club"
+          </div>
+          <div class="col">
+            FC BARCELONA
+          </div>
+        </div>
       </div>
-      <div></div> 
-    </div>
-  </header>
+      </header> 
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-granate sticky-top">
-    <div class="container position-relative">
-      <div class="d-flex align-items-center">
-        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav flex-lg-row flex-column text-start align-items-start w-100">
-          <li class="nav-item">
-            <a class="nav-link" href="/html/index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/html/equipo.html">Equipo</a>
-          </li>
-        </ul>
-      </div>
-      <div class="search-toggle ms-auto">
-        <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
-        <input id="searchBar" class="search-input" type="text" placeholder="Buscar..." onblur="hideSearch()" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">
-      </div>
-    </div>
-  </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-granate">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/index.html">Inicio</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/equipo.html">Equipo</a>
+                    </li>
+
+                  
+                    <li class="nav-item">
+                      <a class="nav-link" href="/html/formulario_asociacion.html">Anotarse</a>
+                  </li>
+
+                  
+                </ul>
+                <!-- Barra de búsqueda a la derecha de UiVerse-->
+
+                <div class="InputContainer">
+                    <input
+                    placeholder="Search"
+                    id="input"
+                    class="input"
+                    name="text"
+                    type="text"
+                    />
+                
+                    <label class="labelforsearch" for="input">
+                    <svg class="searchIcon" viewBox="0 0 512 512">
+                        <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                        ></path>
+                    </svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
   </div>
     <main class="intro-barca text-white">
     
@@ -101,9 +127,10 @@
             </button>
           </div>
     </main>
+    
     <div class="card-group">
       <div class="card">
-        <img src="/img/palmares-trofeos.jpg" class="card-img-top" alt="...">
+        <img src="/img/palmares-trofeos.jpg" class="card-img" alt="...">
         <div class="card-body">
           <h5 class="card-title">Nuestros trofeos</h5>
           <p class="card-text">Conocé la historia que hizo grande al FC Barcelona: una trayectoria llena de pasión, esfuerzo y gloria. 
@@ -112,7 +139,7 @@
       </div>
       <div class="card">
         <a href="/html/equipo.html">
-        <img src="/img/plantilla_fcb.jpg" class="card-img-top" alt="Plantilla" id="plantilla">
+        <img src="/img/plantilla_fcb.jpg" class="card-img" alt="Plantilla" id="plantilla">
         </a>
         <div class="card-body">
           <h5 class="card-title">Nuestra plantilla</h5>
@@ -121,7 +148,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="/img/indumentaria.jpeg" class="card-img-top" alt="...">
+        <img src="/img/indumentaria.jpeg" class="card-img" alt="...">
         <div class="card-body">
           <h5 class="card-title">Nuestra indumentaria</h5>
           <p class="card-text">Conocé nuestra indumentaria oficial, diseñada con materiales de máxima calidad y pensada para brindar comodidad, resistencia y estilo. 
@@ -149,7 +176,7 @@
             <p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"> Terminos y condiciones</a></p>
           </div>
           <div class="col">
-            <a class="icon-link" href="#">
+            <a class="icon-link" href="https://www.instagram.com/">
               <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
                 <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
               </svg>
