@@ -1,24 +1,16 @@
 package GestionMascotas;
 
 public class Pajaro extends Mascota{
-    private boolean esCantor;
+    private int nivelAlegria;
 
-    public Pajaro(String nombre, Dueño dueño) {
+    public Pajaro(String nombre, Dueño dueño, int nivelAlegria) {
         super(nombre, dueño);
-    }
-
-    public String tipoCanto(String canto) {
-        String aux = "";
-        if (esCantor) {
-            aux = canto;
-        }
-        return aux;
     }
 
     @Override
     public String saludar(Dueño dueño){
         if (getDueño() == dueño){
-            return ;
+            return "pio";
         }
         else{
             return null;
@@ -31,6 +23,11 @@ public class Pajaro extends Mascota{
     @Override
     public boolean esDelTipo(Mascota tipoMascota){
         return tipoMascota.getTipo() == this.getTipo();
+    }
+
+    @Override
+    public void alimentar() {
+        nivelAlegria++;
     }
 
     public static void main(String[] args) {

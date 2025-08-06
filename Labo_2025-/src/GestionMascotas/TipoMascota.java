@@ -1,5 +1,5 @@
 package GestionMascotas;
 
 public enum TipoMascota {
-    PERRO, PAJARO, GATO, PEZ;
+    PERRO, PAJARO, GATO, PEZ,CANTOR;
 }

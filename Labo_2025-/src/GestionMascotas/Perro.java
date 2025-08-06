@@ -1,8 +1,9 @@
 package GestionMascotas;
 
 public class Perro extends Mascota{
+    private int nivelAlegria;
 
-    public Perro(String nombre, Dueño dueño) {
+    public Perro(String nombre, Dueño dueño, int nivelAlegria) {
         super(nombre, dueño);
     }
 
@@ -23,6 +24,10 @@ public class Perro extends Mascota{
     @Override
     public boolean esDelTipo(Mascota tipoMascota){
         return tipoMascota.getTipo() == this.getTipo();
+    }
+    @Override
+    public void alimentar(){
+        nivelAlegria++;
     }
 
     public static void main(String[] args) {

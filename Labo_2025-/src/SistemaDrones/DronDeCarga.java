@@ -16,8 +16,17 @@ public class DronDeCarga extends Dron {
         this.pesoCarga = pesoCarga;
     }
 
-    public boolean evaluaMision(){
-
+    public boolean evaluaMision(Mision mision){
+        int nivelCargaAux = 0;
+        if (CalculaDistancia.calculoDistancia(mision.getLatitudInicial(), mision.getLatitudDestino(),
+                mision.getLongitudInicial(), mision.getLongitudDestino()) <= 30){
+            if (getNivelCarga() >= 50) {
+                nivelCargaAux = getNivelCarga() - 50;
+                setNivelCarga(nivelCargaAux);
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void main(String[] args) {

@@ -4,6 +4,11 @@ import java.util.ArrayList;
 public class SistemaMascotas {
     private ArrayList<Mascota> mascotas;
 
+    public void eliminarMuerto (Mascota mascota){
+        if(mascota. == true){
+            mascotas.remove(mascota);
+        }
+    }
     public void agregarMascota(String nombre, Dueño dueño, Mascota tipoMascota){
         tipoMascota.setNombre(nombre);
         tipoMascota.setDueño(dueño);
@@ -18,6 +23,8 @@ public class SistemaMascotas {
         mascotas.remove(mascotaVieja);
         mascotas.add(mascotaNueva);
     }
+
+
 
     public static void main(String[] args) {
 

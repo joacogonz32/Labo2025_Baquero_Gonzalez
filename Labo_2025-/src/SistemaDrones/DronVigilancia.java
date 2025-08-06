@@ -9,12 +9,8 @@ public class DronVigilancia extends Dron {
         this.memoriaSd = memoriaSd;
     }
 
-    public int getMemoriaSd() {
-        return memoriaSd;
-    }
-    public void setMemoriaSd(int memoriaSd) {
-        this.memoriaSd = memoriaSd;
-    }
+    public int getMemoriaSd() {return memoriaSd;}
+    public void setMemoriaSd(int memoriaSd) {this.memoriaSd = memoriaSd;}
 
     @Override
     public boolean evaluaMision(Mision mision){
