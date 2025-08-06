@@ -5,15 +5,23 @@ public class Perro extends Mascota{
 
     public Perro(String nombre, Dueño dueño, int nivelAlegria) {
         super(nombre, dueño);
+        this.nivelAlegria = nivelAlegria;
     }
+
+    public int getNivelAlegria(){return nivelAlegria;}
+    public void setNivelAlegria(int nivelAlegria){this.nivelAlegria = nivelAlegria;}
 
     @Override
     public String saludar(Dueño dueño){
+        String saludo = "Guau";
         if (getDueño() == dueño){
-            return "Guau";
+            for (int i = 1; i < nivelAlegria; i++) {
+                saludo.concat(", " + "Guau");
+            }
+            return saludo;
         }
         else{
-            return "GUAU!";
+            return saludo.toUpperCase();
         }
     }
 
@@ -30,7 +38,14 @@ public class Perro extends Mascota{
         nivelAlegria++;
     }
 
-    public static void main(String[] args) {
-
+    @Override
+    public void seAlimenta(){
+        this.nivelAlegria++;
     }
+
+    @Override
+    public boolean estoyMuerto(){
+        return false;
+    }
+
 }

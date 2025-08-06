@@ -7,5 +7,5 @@ public class TestMascotas {
 
     SistemaMascotas s1 = new SistemaMascotas();
     Dueño d1 = new Dueño("Joaquin", "Gonzalez");
-        s1.agregarMascota("nodsno", d1, new Perro());
+
 }

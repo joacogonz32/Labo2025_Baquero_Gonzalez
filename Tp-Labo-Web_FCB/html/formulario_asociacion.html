@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FC Barcelona | Asociarse</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class = "posicionFija sticky-top">
+    <header class="bg-barca text-white py-2 sticky-top">
+    <div class="text-center">
+      <div class="row fila-container">
+        <div class="col">
+          <a href="/html/index.html">
+          <img src="/img/logo_fcb.svg" alt="Escudo FC Barcelona" class="img-fluid"  style="max-height: 70px;">
+        </a>
+        </div>
+        <div class="col">
+          "Més que un club"
+        </div>
+        <div class="col">
+          FC BARCELONA
+        </div>
+      </div>
+    </div>
+    </header> 
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-granate">
+      <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html/index.html">Inicio</a>
+                  </li>
+                
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html/equipo.html">Equipo</a>
+                  </li>
+
+                
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html/formulario_asociacion.html">Anotarse</a>
+                </li>
+
+                
+              </ul>
+              <!-- Barra de búsqueda a la derecha de UiVerse-->
+
+              <div class="InputContainer">
+                  <input
+                  placeholder="Search"
+                  id="input"
+                  class="input"
+                  name="text"
+                  type="text"
+                  />
+              
+                  <label class="labelforsearch" for="input">
+                  <svg class="searchIcon" viewBox="0 0 512 512">
+                      <path
+                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                      ></path>
+                  </svg>
+                  </label>
+              </div>
+          </div>
+      </div>
+  </nav>
+</div>
+
+  <main class="body-container-form py-5 ">
+    <div class="margen-section-form m-5">
+      <section class="pb-5">
+        <h2>¡Unite al Barça!</h2>
+        <p>
+          ¿Querés ser parte oficial del FC Barcelona? Completá el siguiente formulario para hacerte socio y disfrutar de todos los beneficios exclusivos: acceso preferencial a entradas, descuentos en productos oficiales, participación en eventos del club y mucho más.
+
+Convertite en parte de la familia blaugrana. ¡Inscribite hoy mismo y viví el Barça como nunca!
+        </p>
+
+      </section>
+      <form action="http://localhost:3000/insertar" method="get" class="row g-3 needs-validation">
+        <!-- Nombre completo -->
+        <div class="col-md-6">
+          <label for="nombreCompleto" class="form-label">Nombre</label>
+          <input name="nombre" type="text" class="form-control" id="nombreCompleto" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" autocomplete="off" required>
+          <div class="invalid-feedback">
+            Ingrese un nombre y apellido valido
+          </div>
+        </div>
+        <!--Apellido -->
+        <div class="col-md-6">
+          <label for="nombreCompleto" class="form-label">Apellido</label>
+          <input name="apellido" type="text" class="form-control" id="apellido" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" autocomplete="off" required>
+          <div class="invalid-feedback">
+            Ingrese un nombre y apellido valido
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input name="mail" type="email" class="form-control" id="email" autocomplete="off" required>
+          <div class="invalid-feedback">
+            Ingrese un correo electrónico válido
+          </div>
+        </div>
+        <!-- DNI -->
+        <div class="col-md-6">
+          <label for="dni" class="form-label">DNI</label>
+          <input name="dni" type="text" class="form-control" id="dni" pattern="^\d+$" autocomplete="off" required>
+          <div class="invalid-feedback">
+            Ingrese un DNI válido
+          </div>
+        </div>
+        <!-- País -->
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Pais</label>
+          <input name="pais" type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <!-- Plan -->
+        <div class="col-md-6">
+        <label for="planElegido" class="form-label">Elija su plan</label>
+        <select name="planElegido" class="form-select" id="planElegido" required>
+          <option selected disabled value="">Seleccionar...</option>
+          <option>Premium</option>
+          <option>Elite</option>
+          <option>Regular</option>
+        </select>
+        <div class="invalid-feedback">
+          Seleccione una opción válida.
+          </div>
+        </div>
+        <!-- Aceptar términos -->
+        <div class="col-md-6 d-flex align-items-end">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Acepto los términos y condiciones
+            </label>
+            <div class="invalid-feedback">
+              Debe aceptar los términos.
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón enviar -->
+        <div class="col-12 text-center pt-3">
+          <button class="btn btn-primary px-4" type="submit">Enviar inscripción</button>
+        </div>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 ">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Sobre Nosotros</a></p>
+        </div>
+        <div class="col">
+          <p><a href="#" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"> Terminos y condiciones</a></p>
+        </div>
+        <div class="col">
+          <a class="icon-link" href="https://www.instagram.com/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+            </svg>
+            Nuestro Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/javascript/paises.js"></script>
+</body>
+
+<script>
+
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+  'use strict'
+
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+        form.classList.add('.col-md-6-Error ')
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+</script>
+<!-- País 
+<div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Pais</label>
+          <input name="pais" type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="pais" class="form-label">País</label>
+          <select name="pais" class="form-select" id="pais" required>
+            <option selected disabled value="">Seleccionar país...</option>
+          </select>
+          <div class="invalid-feedback">
+            Seleccione un país válido.
+          </div>
+        </div> -->
+
+</html>
