@@ -1,5 +1,4 @@
 package Persona;
-
 import Unidad1.EnumPais;
 
 import java.time.LocalDate;
@@ -14,6 +13,12 @@ public class Persona{
     private LocalDate fechaNacimiento;
     private LocalDate fechaIngresoAlBanco;
     private int edad;
+
+    public Persona(String nombre, String apellido, LocalDate fechaNacimiento){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+    }
 
     public Persona() {
         this.nombre = "";

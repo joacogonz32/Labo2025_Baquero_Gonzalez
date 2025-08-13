@@ -32,13 +32,7 @@ public class Disenador {
         return sueldo;
     }
 
-    public int cantProyectosHastaAhora(){
-        int cantidad = 0;
-        for (Proyecto p : this.proyectosRealizados){
-            cantidad++;
-        }
-        return cantidad;
-    }
+    public int cantProyectosHastaAhora(){return this.proyectosRealizados.size();}
 
     public double sueldoSinComision(Proyecto p){
         return p.getValorTotal();
