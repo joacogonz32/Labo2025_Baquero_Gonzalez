@@ -1,5 +1,4 @@
 package ControlCalorias;
-
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,10 +41,10 @@ public class Persona_comida {
     public void agregarPlatoConsumido(Plato_calorias plato, int cantidad){
         platosConsumidos.put(plato,cantidad);
     }
-    public int cantidadTotalConsumida(){
-        int caloriasTotales = 0;;
+    public double cantidadTotalConsumida(){
+        double caloriasTotales = 0;;
         for(Map.Entry<Plato_calorias,Integer> calorias : platosConsumidos.entrySet()){
-            caloriasTotales += calorias.getKey().getCantCalorias() * calorias.getValue();
+            caloriasTotales += calorias.getKey().calcularCalorias() * calorias.getValue();
         }
         return caloriasTotales;
     }

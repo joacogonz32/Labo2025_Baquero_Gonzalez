@@ -1,6 +1,7 @@
 package Arrays;
 import Unidad1.Cancion;
 import Persona.Persona;
+import Unidad1.EnumPais;
 
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class CD {
 
     public CD() {
         this.titulo = "Vuelve";
-        this.artista = new Persona("Bad Bunny", 30, "Puerto Rico");
+        this.artista = new Persona("Bad Bunny", 30, EnumPais.valueOf("Puerto Rico"));
         this.cd = new ArrayList<Cancion>();
         cd.add(new Cancion());
     }
@@ -84,9 +85,9 @@ public class CD {
 
     public static void main(String[] args) {
         int posicion = 2;
-        Persona Anuel = new Persona("Anuel", 37, "Puerto Rico");
-        Persona Hades66 = new Persona("Hades66", 25, "Puerto Rico");
-        Persona BryantMyers = new Persona("Bryant Myers", 37, "Puerto Rico");
+        Persona Anuel = new Persona("Anuel", 37, EnumPais.valueOf("Puerto Rico"));
+        Persona Hades66 = new Persona("Hades66", 25, EnumPais.valueOf("Puerto Rico"));
+        Persona BryantMyers = new Persona("Bryant Myers", 37, EnumPais.valueOf("Puerto Rico"));
         Cancion cancion1 = new Cancion("Que Nos Paso", Anuel);
         Cancion cancion2 = new Cancion("Brrr", Anuel);
         CD disco1 = new CD();

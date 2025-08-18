@@ -8,7 +8,7 @@ public class Cancion {
 
     public Cancion(){
         this.titulo = "Indiferente";
-        this.autor = new Persona("Almighty", 34, "Venezuela");
+        this.autor = new Persona("Almighty", 34, EnumPais.valueOf("Venezuela"));
     }
 
     public Cancion(String titulo, Persona autor){

@@ -106,4 +106,20 @@ public class Persona{
     public void mostrarDatosPersona() {
         System.out.println(this.nombre + ", "+ this.edad +", " + this.pais);
     }
+
+    public EnumPais getPais() {
+        return pais;
+    }
+
+    public void setPais(EnumPais pais) {
+        this.pais = pais;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 }
