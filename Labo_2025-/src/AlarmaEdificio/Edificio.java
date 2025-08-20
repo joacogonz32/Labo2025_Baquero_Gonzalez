@@ -1,5 +1,6 @@
 package AlarmaEdificio;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Edificio {
     private ArrayList<Sensor> sensores;
@@ -36,4 +37,18 @@ public class Edificio {
         }
     }
 
+    public void masInfoAlarma(int indice){
+        Scanner s = new Scanner(System.in);
+        try {
+            if (indice >= 0 && indice < sensores.size()) {
+                Sensor seleccionado = sensores.get(indice);
+                System.out.println("Información del sensor en posición " + indice + ":");
+                System.out.println(seleccionado);
+            } else {
+                System.out.println("Índice fuera de rango. Ingrese un número entre 0 y " + (sensores.size() - 1));
+            }
+        } catch (Exception e) {
+            System.out.println("Error: debe ingresar un número entero válido.");
+        }
+    }
 }

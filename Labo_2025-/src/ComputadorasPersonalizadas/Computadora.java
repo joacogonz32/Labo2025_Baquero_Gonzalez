@@ -69,10 +69,9 @@ public class Computadora {
         }
         return contador;
     } */
-
     // Forma mas compleja (No repite codigo)
     public int cantidadDispositivos (String tipoDispositivo){
-        int contador =0;
+        int contador = 0;
         for(Periferico p: perifericos){
             if (p.getClass().getCanonicalName().equals(tipoDispositivo)){
                 contador++;
