@@ -28,6 +28,12 @@ public class Persona{
         this.fechaIngresoAlBanco = LocalDate.now();
     }
 
+    public Persona(String nombre, String apellido, int dni) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+    }
+
     public Persona(String nombre, String apellido){
         this.nombre = nombre;
         this.apellido = apellido;
