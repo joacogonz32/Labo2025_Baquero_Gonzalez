@@ -1,8 +1,7 @@
 package Control_electricidad;
-
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Sistema_Electricidad {
-    private ArrayList<Vivienda> viviendas;
+    private HashSet<Vivienda> viviendas;
 
 }

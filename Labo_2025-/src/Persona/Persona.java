@@ -1,6 +1,5 @@
 package Persona;
 import Unidad1.EnumPais;
-
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -8,7 +7,6 @@ public class Persona{
     private String nombre;
     private String apellido;
     private int dni;
-
     private EnumPais pais;
     private LocalDate fechaNacimiento;
     private LocalDate fechaIngresoAlBanco;
