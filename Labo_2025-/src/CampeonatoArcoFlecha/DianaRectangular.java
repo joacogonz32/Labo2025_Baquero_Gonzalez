@@ -5,7 +5,7 @@ public class DianaRectangular extends Diana{
     private double alturaCm;
     private double baseCm;
 
-    public DianaRectangular(String id, Dificultad nivelDificultad, HashMap<ColorDiana, Integer> puntajeColor) {
+    public DianaRectangular(String id, Dificultad nivelDificultad, HashMap<Integer, ColorDiana> puntajeColor) {
         super(id, nivelDificultad, puntajeColor);
     }
 
@@ -13,4 +13,5 @@ public class DianaRectangular extends Diana{
     public double calcularArea() {
         return alturaCm * baseCm;
     }
+
 }
