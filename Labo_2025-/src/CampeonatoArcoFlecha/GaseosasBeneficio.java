@@ -1,24 +1,35 @@
 package CampeonatoArcoFlecha;
+
 import java.util.HashSet;
 
-public class GaseosasBeneficio implements Acumulable{
+public class GaseosasBeneficio extends Beneficio implements Acumulable {
     private double precio;
     private HashSet<String> gaseosasConBeneficio;
-     public GaseosaBeneficio(String nombre, String creador, HashSet<String> gaseosas) {
+
+    public GaseosasBeneficio(String nombre, String creador, HashSet<String> gaseosasConBeneficio, double precio) {
         super(nombre, creador);
-        this.gaseosas = gaseosas;
+        this.gaseosasConBeneficio = gaseosasConBeneficio;
+        this.precio = precio;
     }
 
     public HashSet<String> getGaseosasConBeneficio() {
-        return gaseosasGaseosasConBeneficio;
+        return gaseosasConBeneficio;
     }
 
-    public void setGaseosas(HashSet<String> gaseosas) {
-        this.gaseosas = gaseosas;
+    public void setGaseosasConBeneficio(HashSet<String> gaseosasConBeneficio) {
+        this.gaseosasConBeneficio = gaseosasConBeneficio;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 
     @Override
     public double aplicarDescuentoExtra() {
-        return this.precio = 1000;
+        return precio - 1000 >= 0 ? precio - 1000 : 0;
     }
 }

@@ -8,6 +8,14 @@ public class DianaCircular extends Diana{
         super(id, nivelDificultad, puntajeColor);
     }
 
+    public static int getRadioCm() {
+        return radioCm;
+    }
+
+    public static void setRadioCm(int radioCm) {
+        DianaCircular.radioCm = radioCm;
+    }
+
     @Override
     public double calcularArea() {
         return Math.PI * radioCm * radioCm;
